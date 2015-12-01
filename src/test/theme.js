@@ -19,6 +19,7 @@ describe ('Theme', () => {
 
     it ('creates a Theme with initialized properties', () => {
       const theme = Theme.create ('default');
+      expect (theme).to.have.property ('name', 'default');
       expect (theme.colors).to.have.property ('red50');
       expect (theme.palette).to.have.property ('primary1Color');
       expect (theme.shapes).to.have.property ('defaultBorderRadius');
