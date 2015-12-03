@@ -19,17 +19,6 @@ function resolveLocalStyle (props, list, localStyle) {
   throw 'Unsupported type for style';
 }
 
-function resolveLocalStyles (props, list, localStyles) {
-  if (!localStyles) {
-    return;
-  }
-  if (Array.isArray (localStyles)) {
-    localStyles.map (s => resolveLocalStyle (props, list, s));
-  } else {
-    resolveLocalStyle (props, list, localStyles);
-  }
-}
-
 /******************************************************************************/
 
 export class Styles {
@@ -53,7 +42,7 @@ export class Styles {
     return this._cacheStyles;
   }
   
-  get (props, ...moreStyles) {
+  get (props) {
     const styles = this.styles;
     const list = [styles.base];
     const kind = props.kind;
@@ -66,10 +55,20 @@ export class Styles {
       } 
     }
     
-    resolveLocalStyles (props, list, localStyles);
-    resolveLocalStyles (props, list, moreStyles);
+    Styles.with (props, list, localStyles);
     
     return list;
+  }
+  
+  static with (props, list, styles) {
+    if (!styles) {
+      return;
+    }
+    if (Array.isArray (styles)) {
+      styles.map (style => resolveLocalStyle (props, list, style));
+    } else {
+      resolveLocalStyle (props, list, styles);
+    }
   }
   
   static build (def) {
