@@ -1,13 +1,13 @@
 'use strict';
 
-import {Colors, Spacing, Timing} from './themes/default';
+import {Colors, Spacing, Timing} from './themes/default.js';
 
 import {
   paletteBuilder,
   shapesBuilder,
   transitionsBuilder,
   typoBuilder
-} from './themes/default';
+} from './themes/default.js';
 
 /******************************************************************************/
 
@@ -15,7 +15,7 @@ const secretKey = {};
 
 /******************************************************************************/
 
-class Theme {
+export class Theme {
   constructor (name, key, colors, palette, shapes, spacing, timing, transitions, typo) {
     if (key !== secretKey) {
       throw new Error ('Do not call Theme constructor directly; use Theme.create instead');
@@ -87,5 +87,3 @@ class Theme {
 }
 
 /******************************************************************************/
-
-module.exports = Theme;

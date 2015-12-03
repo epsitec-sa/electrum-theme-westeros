@@ -1,7 +1,4 @@
 'use strict';
 
-import Theme from './theme.js';
-
-module.exports = {
-  Theme
-};
+export {Theme} from './theme.js';
+export {Styles} from './styles.js';
