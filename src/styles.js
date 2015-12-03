@@ -2,21 +2,19 @@
 
 /******************************************************************************/
 
-function resolveLocalStyle (props, list, localStyle) {
+function resolveLocalStyle (styleMap, props, list, localStyle) {
+  if (typeof localStyle === 'string') {
+    localStyle = styleMap[localStyle]; 
+  }
   if (!localStyle) {
     return;
-  }
-  if (typeof localStyle === 'string') {
-    const {state} = props;
-    // TODO: get local style from state value
-    return; 
   }
   if (typeof localStyle === 'object') {
     list.push (localStyle);
     return;
   }
   
-  throw 'Unsupported type for style';
+  throw `Unsupported type for style ${localStyle}`;
 }
 
 /******************************************************************************/
@@ -43,31 +41,26 @@ export class Styles {
   }
   
   get (props) {
-    const styles = this.styles;
-    const list = [styles.base];
+    const styleMap = this.styles;
+    const list = [styleMap.base];
     const kind = props.kind;
     const localStyles = props.styles;
     
-    if (kind) {
-      const style = styles[kind];
-      if (style) {
-        list.push (style);
-      } 
-    }
-    
-    Styles.with (props, list, localStyles);
+    this.with (props, list, kind);
+    this.with (props, list, localStyles);
     
     return list;
   }
   
-  static with (props, list, styles) {
-    if (!styles) {
+  with (props, list, localStyles) {
+    if (!localStyles) {
       return;
     }
-    if (Array.isArray (styles)) {
-      styles.map (style => resolveLocalStyle (props, list, style));
+    const styleMap = this.styles;
+    if (Array.isArray (localStyles)) {
+      localStyles.map (style => resolveLocalStyle (styleMap, props, list, style));
     } else {
-      resolveLocalStyle (props, list, styles);
+      resolveLocalStyle (styleMap, props, list, localStyles);
     }
   }
   
