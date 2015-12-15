@@ -5,6 +5,7 @@ import {Colors, Spacing, Timing} from './themes/default.js';
 import {
   paletteBuilder,
   shapesBuilder,
+  stylesBuilder,
   transitionsBuilder,
   typoBuilder
 } from './themes/default.js';
@@ -16,21 +17,22 @@ const secretKey = {};
 /******************************************************************************/
 
 export class Theme {
-  constructor (name, key, colors, palette, shapes, spacing, timing, transitions, typo) {
+  constructor (name, key, config) {
     if (key !== secretKey) {
       throw new Error ('Do not call Theme constructor directly; use Theme.create instead');
     }
-    if (!typo.font) {
+    if (!config.typo.font) {
       throw new Error ('Typo has no default font');
     }
     this._name = name;
-    this._colors = colors;
-    this._palette = palette;
-    this._shapes = shapes;
-    this._spacing = spacing;
-    this._timing = timing;
-    this._transitions = transitions;
-    this._typo = typo;
+    this._colors = config.colors;
+    this._palette = config.palette;
+    this._shapes = config.shapes;
+    this._spacing = config.spacing;
+    this._styles = config.styles;
+    this._timing = config.timing;
+    this._transitions = config.transitions;
+    this._typo = config.typo;
   }
 
   get name () {
@@ -51,6 +53,10 @@ export class Theme {
 
   get spacing () {
     return this._spacing;
+  }
+
+  get styles () {
+    return this._styles;
   }
 
   get timing () {
@@ -74,15 +80,18 @@ export class Theme {
     const Shapes      = shapesBuilder (Spacing);
     const Transitions = transitionsBuilder (Timing);
     const Typo        = typoBuilder (Spacing);
+    const Styles      = stylesBuilder ({Colors, Palette, Shapes, Spacing, Timing, Transitions, Typo});
 
-    return new Theme (name, secretKey,
-      Colors,
-      Palette,
-      Shapes,
-      Spacing,
-      Timing,
-      Transitions,
-      Typo);
+    return new Theme (name, secretKey, {
+      colors: Colors,
+      palette: Palette,
+      shapes: Shapes,
+      spacing: Spacing,
+      styles: Styles,
+      timing: Timing,
+      transitions: Transitions,
+      typo: Typo
+    });
   }
 }
 

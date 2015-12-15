@@ -8,6 +8,9 @@ import paletteBuilder     from './default/default-palette-builder.js';
 import shapesBuilder      from './default/default-shapes-builder.js';
 import transitionsBuilder from './default/default-transitions-builder.js';
 import typoBuilder        from './default/default-typo-builder.js';
+import stylesBuilder      from './default/default-styles-builder.js';
+
+/******************************************************************************/
 
 module.exports = {
   Colors,
@@ -15,6 +18,9 @@ module.exports = {
   Timing,
   paletteBuilder,
   shapesBuilder,
+  stylesBuilder,
   transitionsBuilder,
   typoBuilder
 };
+
+/******************************************************************************/

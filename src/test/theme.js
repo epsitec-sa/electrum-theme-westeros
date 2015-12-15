@@ -24,6 +24,7 @@ describe ('Theme', () => {
       expect (theme.palette).to.have.property ('primary1Color');
       expect (theme.shapes).to.have.property ('defaultBorderRadius');
       expect (theme.spacing).to.have.property ('iconSize');
+      expect (theme.styles).to.have.property ('reset');
       expect (theme.timing).to.have.property ('timeBase');
       expect (theme.transitions).to.have.property ('defaultTransition');
       expect (theme.typo).to.have.property ('font');

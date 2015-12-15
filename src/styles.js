@@ -2,32 +2,64 @@
 
 /******************************************************************************/
 
-function resolveLocalStyle (styleMap, props, list, localStyle) {
+function appendIncludes (result, includes) {
+  for (let include of includes) {
+    if (include) {
+      Object.assign (result, include);
+    }
+  }
+  return result;
+}
+
+function resolveIncludes (style, theme) {
+  if (style.includes) {
+    let result = {};
+    const names = Object.getOwnPropertyNames (style);
+    for (let name of names) {
+      if (name === 'includes') {
+        result = appendIncludes (result, style.includes.map (include => theme.styles[include]));
+      } else {
+        result[name] = style[name];
+      }
+    }
+    return result;
+  }
+  return style;
+}
+
+function resolveLocalStyle (styleMap, props, list, localStyle, theme) {
   if (typeof localStyle === 'string') {
-    localStyle = styleMap[localStyle]; 
+    localStyle = styleMap[localStyle];
   }
   if (!localStyle) {
     return;
   }
   if (typeof localStyle === 'object') {
-    list.push (localStyle);
+    list.push (resolveIncludes (localStyle, theme));
     return;
   }
-  
+
   throw `Unsupported type for style ${localStyle}`;
 }
 
 /******************************************************************************/
 
+const secretKey = {};
+
+/******************************************************************************/
+
 export class Styles {
-  constructor (def) {
+  constructor (key, def) {
+    if (key !== secretKey) {
+      throw new Error ('Do not call Styles constructor directly; use Styles.create instead');
+    }
     if (typeof def !== 'function' ||
         def.length !== 1) {
       throw new Error ('Styles must be defined by a function taking 1 argument');
     }
     this._def = def;
   }
-  
+
   apply (theme) {
     if (this._cacheTheme !== theme) {
       this._cacheStyles = this._def (theme);
@@ -35,40 +67,36 @@ export class Styles {
     }
     return this;
   }
-  
+
   get styles () {
     return this._cacheStyles;
   }
-  
+
   get (props) {
-    const styleMap = this.styles;
-    const list = [styleMap.base];
-    const kind = props.kind;
-    const localStyles = props.styles;
-    
-    this.with (props, list, kind);
-    this.with (props, list, localStyles);
-    
+    const list = [];
+    this.with (props, list, 'base');
+    this.with (props, list, props.kind);
+    this.with (props, list, props.styles);
     return list;
   }
-  
-  with (props, list, localStyles) {
-    if (!localStyles) {
+
+  with (props, list, local) {
+    if (!local) {
       return;
     }
     const styleMap = this.styles;
-    if (Array.isArray (localStyles)) {
-      localStyles.map (style => resolveLocalStyle (styleMap, props, list, style));
+    if (Array.isArray (local)) {
+      local.map (style => resolveLocalStyle (styleMap, props, list, style, this._cacheTheme));
     } else {
-      resolveLocalStyle (styleMap, props, list, localStyles);
+      resolveLocalStyle (styleMap, props, list, local, this._cacheTheme);
     }
   }
-  
-  static build (def) {
+
+  static create (def) {
     if (def === undefined) {
       return theme => ({});
     }
-    const styles = new Styles (def);
+    const styles = new Styles (secretKey, def);
     return theme => styles.apply (theme);
   }
 }
