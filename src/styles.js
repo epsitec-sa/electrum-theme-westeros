@@ -27,16 +27,19 @@ function resolveIncludes (style, theme) {
   return style;
 }
 
-function resolveLocalStyle (styleMap, props, list, localStyle, theme) {
+function resolveLocalStyle (styleMap, localStyle, theme, list) {
   if (typeof localStyle === 'string') {
     localStyle = styleMap[localStyle];
   }
   if (!localStyle) {
-    return;
+    return undefined;
   }
   if (typeof localStyle === 'object') {
-    list.push (resolveIncludes (localStyle, theme));
-    return;
+    const style = resolveIncludes (localStyle, theme);
+    if (list) {
+      list.push (style);
+    }
+    return style;
   }
 
   throw `Unsupported type for style ${localStyle}`;
@@ -74,21 +77,25 @@ export class Styles {
 
   get (props) {
     const list = [];
-    this.with (props, list, 'base');
-    this.with (props, list, props.kind);
-    this.with (props, list, props.styles);
+    this.with (list, 'base');
+    this.with (list, props.kind);
+    this.with (list, props.styles);
     return list;
   }
 
-  with (props, list, local) {
+  resolve (name) {
+    return resolveLocalStyle (this.styles, name, this._cacheTheme);
+  }
+
+  with (list, local) {
     if (!local) {
       return;
     }
     const styleMap = this.styles;
     if (Array.isArray (local)) {
-      local.map (style => resolveLocalStyle (styleMap, props, list, style, this._cacheTheme));
+      local.map (style => resolveLocalStyle (styleMap, style, this._cacheTheme, list));
     } else {
-      resolveLocalStyle (styleMap, props, list, local, this._cacheTheme);
+      resolveLocalStyle (styleMap, local, this._cacheTheme, list);
     }
   }
 

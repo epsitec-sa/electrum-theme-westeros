@@ -29,6 +29,14 @@ describe ('Style', () => {
     });
   });
 
+  describe ('resolve()', () => {
+    const styles = Styles.create (def) (theme);
+    it ('resolves requested style', () => {
+      expect (styles.resolve ('base')).to.deep.equal ({size: 10});
+      expect (styles.resolve ('small')).to.deep.equal ({size: 5});
+    });
+  });
+
   describe ('get()', () => {
     const styles = Styles.create (def) (theme);
     it ('returns basic style', () => {
