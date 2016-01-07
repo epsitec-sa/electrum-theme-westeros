@@ -57,16 +57,23 @@ export class Styles {
       throw new Error ('Do not call Styles constructor directly; use Styles.create instead');
     }
     if (typeof def !== 'function' ||
-        def.length !== 1) {
-      throw new Error ('Styles must be defined by a function taking 1 argument');
+        def.length < 1 ||
+        def.length > 2) {
+      throw new Error ('Styles must be defined by a function taking 1 or 2 arguments');
     }
     this._def = def;
+    this._defUsesProps = def.length === 2;
   }
 
-  apply (theme) {
+  apply (theme, props) {
     if (this._cacheTheme !== theme) {
-      this._cacheStyles = this._def (theme);
-      this._cacheTheme = theme;
+      if (this._defUsesProps) {
+        this._cacheStyles = this._def (theme, props);
+        this._cacheTheme = null; // recompute styles every time - disable the cache
+      } else {
+        this._cacheStyles = this._def (theme);
+        this._cacheTheme = theme;
+      }
     }
     return this;
   }
@@ -101,10 +108,10 @@ export class Styles {
 
   static create (def) {
     if (def === undefined) {
-      return theme => ({});
+      return () => ({});
     }
     const styles = new Styles (secretKey, def);
-    return theme => styles.apply (theme);
+    return (theme, props) => styles.apply (theme, props);
   }
 }
 
