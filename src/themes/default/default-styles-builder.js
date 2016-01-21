@@ -33,10 +33,18 @@ const resetAlign = {
 
 const resetLayout = Object.assign ({}, resetBorder, resetMargin, resetPadding);
 
+const fullSize = {
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%'
+};
+
 /******************************************************************************/
 
 export default function (config) { /*jshint unused:false*/
   return {
+    fullSize,
     reset: Object.assign ({}, resetAlign, resetLayout, resetListStyle),
     resetAlign,
     resetBorder,
