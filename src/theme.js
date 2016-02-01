@@ -1,14 +1,6 @@
 'use strict';
 
-import {Colors, Spacing, Timing} from './themes/default.js';
-
-import {
-  paletteBuilder,
-  shapesBuilder,
-  stylesBuilder,
-  transitionsBuilder,
-  typoBuilder
-} from './themes/default.js';
+import DefaultThemeConfig from './themes/default.js';
 
 /******************************************************************************/
 
@@ -71,16 +63,27 @@ export class Theme {
     return this._typo;
   }
 
-  static create (name) {
+  static create (name, config = DefaultThemeConfig) {
     if ((typeof name !== 'string') ||
         (name.length === 0)) {
       throw new Error ('name must be a valid string');
     }
-    const Palette     = paletteBuilder (Colors);
-    const Shapes      = shapesBuilder (Spacing);
-    const Transitions = transitionsBuilder (Timing);
-    const Typo        = typoBuilder (Spacing);
-    const Styles      = stylesBuilder ({Colors, Palette, Shapes, Spacing, Timing, Transitions, Typo});
+    const Colors      = config.Colors;
+    const Spacing     = config.Spacing;
+    const Timing      = config.Timing;
+    const Palette     = config.paletteBuilder (Colors);
+    const Shapes      = config.shapesBuilder (Spacing);
+    const Transitions = config.transitionsBuilder (Timing);
+    const Typo        = config.typoBuilder (Spacing);
+    const Styles      = config.stylesBuilder ({
+      Colors,
+      Palette,
+      Shapes,
+      Spacing,
+      Timing,
+      Transitions,
+      Typo
+    });
 
     return new Theme (name, secretKey, {
       colors: Colors,
