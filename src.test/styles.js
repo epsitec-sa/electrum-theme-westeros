@@ -1,7 +1,7 @@
 'use strict';
 
 import {expect} from 'mai-chai';
-import {Styles, Theme} from '../index.js';
+import {Styles, Theme} from 'electrum-theme';
 
 const theme = Theme.create ('default');
 

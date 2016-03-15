@@ -1,9 +1,9 @@
 'use strict';
 
 import {expect} from 'mai-chai';
-import {Theme} from '../index.js';
+import {Theme} from 'electrum-theme';
 
-import DarkThemeConfig from '../themes/dark.js';
+import DarkThemeConfig from '../src/themes/dark.js';
 
 describe ('Theme', () => {
   describe ('constructor()', () => {
