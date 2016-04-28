@@ -7,6 +7,7 @@ const theme = Theme.create ('default');
 
 const def1 = (theme) => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
 const def2 = (theme, props) => ({base: {size: props.size || 10}, small: {size: 5}});
+const def3 = (theme) => ({a: {x: 10, n: 'a'}, b: {y: 20, n: 'b'}, c: {x: 11, y: 22}});
 
 describe ('Style', () => {
   describe ('create()', () => {
@@ -56,10 +57,30 @@ describe ('Style', () => {
   });
 
   describe ('resolve()', () => {
-    const styles = Styles.create (def1) (theme);
     it ('resolves requested style', () => {
+      const styles = Styles.create (def1) (theme);
       expect (styles.resolve ('base')).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
       expect (styles.resolve ('small')).to.deep.equal ({size: 5});
+    });
+
+    it ('returns {} for an unknown style', () => {
+      const styles = Styles.create (def1) (theme);
+      expect (styles.resolve ('missing')).to.deep.equal ({});
+    });
+
+    it ('resolves and combines multiple styles in order', () => {
+      const styles = Styles.create (def3) (theme);
+      expect (styles.resolve ('a', 'b')).to.deep.equal ({x: 10, n: 'b', y: 20});
+      expect (styles.resolve ('b', 'a')).to.deep.equal ({y: 20, n: 'a', x: 10});
+      expect (styles.resolve ('b', 'a', 'c')).to.deep.equal ({y: 22, n: 'a', x: 11});
+      expect (styles.resolve ('a', 'b', 'c')).to.deep.equal ({y: 22, n: 'b', x: 11});
+    });
+
+    it ('resolves and combines multiple styles in order', () => {
+      const styles = Styles.create (def3) (theme);
+      expect (styles.resolve ('a', 'x')).to.deep.equal ({x: 10, n: 'a'});
+      expect (styles.resolve ('x', 'a')).to.deep.equal ({x: 10, n: 'a'});
+      expect (styles.resolve ('x', 'x')).to.deep.equal ({});
     });
   });
 

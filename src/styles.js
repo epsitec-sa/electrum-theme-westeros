@@ -28,11 +28,18 @@ function resolveIncludes (style, theme) {
 }
 
 function resolveLocalStyle (styleMap, localStyle, theme, list) {
+  if (Array.isArray (localStyle)) {
+    let result = {};
+    localStyle.forEach (x => {
+      result = {...result, ...resolveLocalStyle (styleMap, x, theme, list)};
+    });
+    return result;
+  }
   if (typeof localStyle === 'string') {
     localStyle = styleMap[localStyle];
   }
   if (!localStyle) {
-    return undefined;
+    return {};
   }
   if (typeof localStyle === 'object') {
     const style = resolveIncludes (localStyle, theme);
@@ -90,20 +97,12 @@ export class Styles {
     return list;
   }
 
-  resolve (name) {
-    return resolveLocalStyle (this.styles, name, this._cacheTheme);
+  resolve (...names) {
+    return resolveLocalStyle (this.styles, names, this._cacheTheme);
   }
 
-  with (list, local) {
-    if (!local) {
-      return;
-    }
-    const styleMap = this.styles;
-    if (Array.isArray (local)) {
-      local.map (style => resolveLocalStyle (styleMap, style, this._cacheTheme, list));
-    } else {
-      resolveLocalStyle (styleMap, local, this._cacheTheme, list);
-    }
+  with (list, ...local) {
+    resolveLocalStyle (this.styles, local, this._cacheTheme, list);
   }
 
   static create (def) {
