@@ -94,6 +94,7 @@ export class Styles {
     this.with (list, 'base');
     this.with (list, props.kind);
     this.with (list, props.styles);
+    this.with (list, props.style);
     return list;
   }
 
