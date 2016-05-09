@@ -9,10 +9,5 @@ export default function (spacing) { /*jshint unused:false */
     lineHeight:      '32px',
     containerMargin: '20px',
     lineSpacing:     '10px',
-    leftWidth:       '80px',
-    mainTabHeight:   '50px',
-    viewTabHeight:   '32px',
-    footerHeight:    '70px',
-    actionHeight:    '50px',
   };
 }
