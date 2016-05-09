@@ -22,12 +22,5 @@ export default function (colors) {
     base:       '#336799',
     light:      '#ffffff',
     dark:       '#222222',
-
-    hover:      '#d0e8ff',
-    view:       '#f5f5f5',
-    pane:       '#ffffff',
-    mainTab:    '#dcdcdc',
-    viewTab:    '#222222',
-    footer:     '#222222',
   };
 }
