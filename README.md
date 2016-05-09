@@ -29,11 +29,11 @@ instance:
 
 * Method `this.resolveStyle()` forwards to `styles.resolve()`
 * Property `this.styles` returns a contextual array of style objects,
-  depending on the `props` found on the component instance. 
+  depending on the `props` found on the component instance.
 
 Futhermore, you can use `this.styles.with (name1, name2, ...)` to apply
 additional styles to the array of style objects, by appending the named
-styles. Internally, this relies on `styles.with()` and `styles.resolve()`. 
+styles. Internally, this relies on `styles.with()` and `styles.resolve()`.
 
 ## Resolving a specific style
 
@@ -51,10 +51,13 @@ using `styles.resolve()`:
 Electrum Theme also exposes a `ColorManipulator` which contains following
 functions:
 
-* `fade(color, amount)` &rarr; faded color by altering the alpha channel.
-* `lighten(color, amount)` &rarr; lighter color with fixed 0.15 alpha channel. 
+* `fade(color, amount)` &rarr; faded color done by altering the alpha channel.
+* `lighten(color, amount)` &rarr; lighter color.
 * `darken(color, amount)` &rarr; darker color.
-* `luminance(color)` &rarr; the computed luminance (0...1).
+* `emphasize(color, amount)` &rarr; darker color/lighter color (depending
+  on the initial luminance). A dark color will become lighter. A light
+  color will become darker.
+* `getLuminance(color)` &rarr; the computed luminance (0...1).
 
 ```javascript
 import {ColorManipulator} from 'electrum-theme';
