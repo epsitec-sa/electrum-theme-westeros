@@ -19,8 +19,19 @@ export default function (colors) {
 
     /* colors defined by Daniel Roux -- to be renamed */
 
+    // Couleurs de base définies par Gilles :
     base:       '#336799',
     light:      '#ffffff',
     dark:       '#222222',
+
+    // Couleurs turquoises :
+    // base:       '#33997e',
+    // light:      '#f2fffc',
+    // dark:       '#10372c',
+
+    // Couleurs pastels inversées :
+    // base:       '#feebff',
+    // light:      '#39173b',
+    // dark:       '#ffffff',
   };
 }
