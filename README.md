@@ -66,6 +66,16 @@ const color1 = '#00ff00';
 const color2 = ColorManipulator.darken (color1, 0.2);
 ```
 
+## Unit manipulation
+
+`Unit.multiply(value, factor)` can be used to multiply a value (number
+or standard CSS dimension specification) by a factor. Following dimensions
+are supported:
+
+* `px`
+* `em` and `rem`
+* `%`
+
 # Styling with a theme in electrum components
 
 `electrum` injects a special style getter `this.styles` which can be used
