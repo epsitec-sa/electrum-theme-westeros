@@ -1,24 +1,19 @@
 'use strict';
 
+import {Unit} from 'electrum-theme';
+
 export default function (spacing) { /*jshint unused:false */
   return {
     defaultBorderRadius: 2,
 
     /* geometry settings defined by Daniel Roux - to be renamed */
 
-    // Géométrie définie par Gilles:
-    lineHeight:      '32px',
-    containerMargin: '20px',
-    lineSpacing:     '10px',
+    lineHeight:      spacing.lineHeight,
+    containerMargin: spacing.containerMargin,
+    lineSpacing:     spacing.lineSpacing,
 
-    // Géométrie compacte:
-    // lineHeight:      '25px',
-    // containerMargin: '10px',
-    // lineSpacing:     '5px',
+    leftWidth:        Unit.multiply (spacing.lineHeight, 2.5),
+    leftButtonHeight: Unit.multiply (spacing.lineHeight, 3.0),
 
-    // Grands champs serrés:
-    // lineHeight:      '30px',
-    // containerMargin: '10px',
-    // lineSpacing:     '-1px',
   };
 }
