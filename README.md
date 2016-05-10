@@ -65,3 +65,77 @@ import {ColorManipulator} from 'electrum-theme';
 const color1 = '#00ff00';
 const color2 = ColorManipulator.darken (color1, 0.2);
 ```
+
+# Styling with a theme in electrum components
+
+`electrum` injects a special style getter `this.styles` which can be used
+to automatically produce a style object which can be fed to Radium.
+
+Here is a minimal component which automatically styles its `<span>`
+element using the `this.styles` getter:
+
+```javascript
+// hello.component.js
+export default class Hello extends React.Component {
+  render () {
+    return <span style={this.styles}>Hello</span>;
+  }
+}
+// hello.styles.js
+export default function (theme) {
+  return {
+    base: {
+      color: theme.colors.black,
+      fontFamily: theme.typo.font
+    },
+    cool: {
+      color: theme.colors.blue100
+    }
+  };
+}
+```
+
+The user of the component can then say `<Hello/>` and get the component
+display its text in black with the theme's font (the CSS styles found
+in `base` are applied by default).
+
+To get the bright blue (`blue100`) color, the user writes `<Hello kind='cool'/>`.
+The `kind` property specifies that the _cool_ CSS styles have to be applied
+on top of the _base styles_ for component `<Hello>`.
+
+The component can also explicitly apply sub-styles (by name or directly
+as style objects) by applying them using function `with()`:
+
+```javascript
+let styles = this.styles;
+if (disabled) {
+  styles = styles.with ('disabled');
+}
+if (whatever) {
+  styles = styles.with ('other');
+}
+if (x > 100) {
+  styles = styles.with ({width: x*2 - 100});
+}
+```
+
+The `*.styles.js` file should include style objects called `disabled`
+and `other`.
+
+## Inclusion of theme styles
+
+The theme can define styles (`theme.styles`) which can be included
+using the special `includes` style property which lists the names
+of the theme styles to include:
+
+```javascript
+export default function (theme) {
+  return {
+    base: {
+      position: 'fixed',
+      includes: ['fullSize'],  // <-- include style fullSize here
+      backgroundColor: theme.palette.canvasColor
+    }
+  };
+}
+```
