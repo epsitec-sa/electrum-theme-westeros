@@ -27,12 +27,16 @@ export default function (spacing) { /*jshint unused:false */
     paneNavigatorHeight:   Unit.multiply (spacing.lineHeight, 1.0),
     paneNavigatorTextSize: '100%',
 
-    footerHeight:          Unit.multiply (spacing.lineHeight, 1.5),
+    footerHeight:          Unit.multiply (spacing.lineHeight, 2.0),
     footerTextSize:        '100%',
 
     actionHeight:          Unit.multiply (spacing.lineHeight, 1.5),
     actionRadius:          Unit.multiply (spacing.lineHeight, 0.75),
     actionTextSize:        '100%',
+
+    buttonTextSize:        '100%',
+    labelTextSize:         '100%',
+    labelTitleTextSize:    '125%',
 
   };
 }
