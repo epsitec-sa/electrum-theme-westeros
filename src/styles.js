@@ -20,6 +20,8 @@ export class Styles {
     }
     this._def = def;
     this._defUsesProps = def.length === 2;
+    this._cacheStyles = null;
+    this._cacheTheme  = null;
   }
 
   apply (theme, props) {
@@ -37,10 +39,6 @@ export class Styles {
 
   get styles () {
     return this._cacheStyles;
-  }
-
-  get (props) {
-    return this.resolve ('base', props.kind, props.styles, props.style);
   }
 
   resolve (...names) {

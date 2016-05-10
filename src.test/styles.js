@@ -111,43 +111,52 @@ describe ('Style', () => {
     });
   });
 
-  describe ('get()', () => {
+  describe ('customResolve()', () => {
+    function customResolve (styles, props) {
+      return styles.resolve ('base', props.kind, props.styles, props.style);
+    }
+
     const styles = Styles.create (def1) (theme);
     it ('returns basic style', () => {
       const props = {};
-      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
+      expect (customResolve (styles, props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
     });
 
     it ('appends props.kind sub-style to style', () => {
       const props = {kind: 'small'};
-      expect (styles.get (props)).to.deep.equal ({size: 5, face: 'Roboto, sans-serif'});
+      expect (customResolve (styles, props)).to.deep.equal ({size: 5, face: 'Roboto, sans-serif'});
     });
 
     it ('no-op if props.kind does not map to a sub-style', () => {
       const props = {kind: 'large'};
-      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
+      expect (customResolve (styles, props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
     });
 
     it ('appends props.styles to style', () => {
       const props = {styles: {foo: 'bar'}};
-      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar'});
+      expect (customResolve (styles, props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar'});
+    });
+
+    it ('executes functions in props.styles', () => {
+      const props = {styles: {size: s => s.size+2}};
+      expect (customResolve (styles, props)).to.deep.equal ({size: 12, face: 'Roboto, sans-serif'});
     });
 
     it ('appends props.styles (array) to style', () => {
       const props = {styles: [{foo: 'bar'}, {foo: s => s.foo + '/foo'}]};
-      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar/foo'});
+      expect (customResolve (styles, props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar/foo'});
     });
 
     it ('resolves includes', () => {
       const props = {styles: {foo: 'bar', includes: ['resetAlign']}};
-      expect (JSON.stringify (styles.get (props))).to.equal (
+      expect (JSON.stringify (customResolve (styles, props))).to.equal (
         '{"size":10,"face":"Roboto, sans-serif","foo":"bar","verticalAlign":"baseline"}'
       );
     });
 
     it ('resolves includes, preserves ordering', () => {
       const props = {styles: {includes: ['resetAlign'], foo: 'bar'}};
-      expect (JSON.stringify (styles.get (props))).to.equal (
+      expect (JSON.stringify (customResolve (styles, props))).to.equal (
         '{"size":10,"face":"Roboto, sans-serif","verticalAlign":"baseline","foo":"bar"}'
       );
     });
