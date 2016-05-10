@@ -19,10 +19,6 @@ export default function (colors) {
     borderColor: colors.grey300,
     disabledColor: ColorManipulator.fade (colors.darkBlack, 0.3),
 
-    base:  colors.base,
-    light: colors.light,
-    dark:  colors.dark,
-
     rootBackground:                  darken (colors.base, 0.4),
 
     taskBackground:                  colors.base,
