@@ -1,7 +1,7 @@
 'use strict';
 
-import Colors  from './pink/pink-colors.js';
-import Spacing from './default/default-spacing.js';
+import Colors  from './colors/green-colors.js';
+import Spacing from './spacings/special-spacing.js';
 import Timing  from './default/default-timing.js';
 
 import paletteBuilder     from './default/default-palette-builder.js';

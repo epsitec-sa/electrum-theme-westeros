@@ -1,6 +1,6 @@
 'use strict';
 
-import Colors  from './green/green-colors.js';
+import Colors  from './colors/green-colors.js';
 import Spacing from './default/default-spacing.js';
 import Timing  from './default/default-timing.js';
 
