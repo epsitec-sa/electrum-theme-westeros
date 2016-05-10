@@ -12,8 +12,8 @@ export default function (spacing) { /*jshint unused:false */
     containerMargin: spacing.containerMargin,
     lineSpacing:     spacing.lineSpacing,
 
-    leftWidth:        Unit.multiply (spacing.lineHeight, 2.5),
-    leftButtonHeight: Unit.multiply (spacing.lineHeight, 3.0),
+    taskButtonWidth:  Unit.multiply (spacing.lineHeight, 2.5),
+    taskButtonHeight: Unit.multiply (spacing.lineHeight, 3.0),
 
   };
 }
