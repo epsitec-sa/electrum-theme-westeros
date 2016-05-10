@@ -76,11 +76,38 @@ describe ('Style', () => {
       expect (styles.resolve ('a', 'b', 'c')).to.deep.equal ({y: 22, n: 'b', x: 11});
     });
 
-    it ('resolves and combines multiple styles in order', () => {
+    it ('skips unknown styles', () => {
       const styles = Styles.create (def3) (theme);
-      expect (styles.resolve ('a', 'x')).to.deep.equal ({x: 10, n: 'a'});
-      expect (styles.resolve ('x', 'a')).to.deep.equal ({x: 10, n: 'a'});
-      expect (styles.resolve ('x', 'x')).to.deep.equal ({});
+      expect (styles.resolve ('a', 'Q')).to.deep.equal ({x: 10, n: 'a'});
+      expect (styles.resolve ('Q', 'a')).to.deep.equal ({x: 10, n: 'a'});
+      expect (styles.resolve ('Q', 'Q')).to.deep.equal ({});
+    });
+
+    it ('applies functions', () => {
+      const def = (theme) => ({
+        a: {x: 10, n: 'a'},
+        b: {y: s => s.x * 2, n: 'b'}
+      });
+      const styles = Styles.create (def) (theme);
+      expect (styles.resolve ('a', 'b')).to.deep.equal ({x: 10, n: 'b', y: 20});
+    });
+    
+    it ('merges nested properties', () => {
+      const def = (theme) => ({
+        a: {x: 10, y: {f: 'f', g: 'A'}},
+        b: {y: s => ({g: 'B', h: 'h', xx: s.x / 2})}
+      });
+      const styles = Styles.create (def) (theme);
+      expect (styles.resolve ('a', 'b')).to.deep.equal ({x: 10, y: {f: 'f', g: 'B', h: 'h', xx: 5}});
+    });
+    
+    it ('undefines null properties', () => {
+      const def = (theme) => ({
+        a: {x: 10, y: 10},
+        b: {z: 20, x: null}
+      });
+      const styles = Styles.create (def) (theme);
+      expect (styles.resolve ('a', 'b')).to.deep.equal ({y: 10, z: 20});
     });
   });
 
@@ -88,40 +115,40 @@ describe ('Style', () => {
     const styles = Styles.create (def1) (theme);
     it ('returns basic style', () => {
       const props = {};
-      expect (styles.get (props)).to.deep.equal ([{size: 10, face: 'Roboto, sans-serif'}]);
+      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
     });
 
     it ('appends props.kind sub-style to style', () => {
       const props = {kind: 'small'};
-      expect (styles.get (props)).to.deep.equal ([{size: 10, face: 'Roboto, sans-serif'}, {size: 5}]);
+      expect (styles.get (props)).to.deep.equal ({size: 5, face: 'Roboto, sans-serif'});
     });
 
     it ('no-op if props.kind does not map to a sub-style', () => {
       const props = {kind: 'large'};
-      expect (styles.get (props)).to.deep.equal ([{size: 10, face: 'Roboto, sans-serif'}]);
+      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif'});
     });
 
     it ('appends props.styles to style', () => {
       const props = {styles: {foo: 'bar'}};
-      expect (styles.get (props)).to.deep.equal ([{size: 10, face: 'Roboto, sans-serif'}, {foo: 'bar'}]);
+      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar'});
     });
 
     it ('appends props.styles (array) to style', () => {
-      const props = {styles: [{foo: 'bar'}, {foo: 'foo'}]};
-      expect (styles.get (props)).to.deep.equal ([{size: 10, face: 'Roboto, sans-serif'}, {foo: 'bar'}, {foo: 'foo'}]);
+      const props = {styles: [{foo: 'bar'}, {foo: s => s.foo + '/foo'}]};
+      expect (styles.get (props)).to.deep.equal ({size: 10, face: 'Roboto, sans-serif', foo: 'bar/foo'});
     });
 
-    it ('resolve includes', () => {
+    it ('resolves includes', () => {
       const props = {styles: {foo: 'bar', includes: ['resetAlign']}};
       expect (JSON.stringify (styles.get (props))).to.equal (
-        '[{"size":10,"face":"Roboto, sans-serif"},{"foo":"bar","verticalAlign":"baseline"}]'
+        '{"size":10,"face":"Roboto, sans-serif","foo":"bar","verticalAlign":"baseline"}'
       );
     });
 
-    it ('resolve includes, preserves ordering', () => {
+    it ('resolves includes, preserves ordering', () => {
       const props = {styles: {includes: ['resetAlign'], foo: 'bar'}};
       expect (JSON.stringify (styles.get (props))).to.equal (
-        '[{"size":10,"face":"Roboto, sans-serif"},{"verticalAlign":"baseline","foo":"bar"}]'
+        '{"size":10,"face":"Roboto, sans-serif","verticalAlign":"baseline","foo":"bar"}'
       );
     });
   });

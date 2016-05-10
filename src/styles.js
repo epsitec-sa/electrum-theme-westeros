@@ -1,56 +1,6 @@
 'use strict';
 
-/******************************************************************************/
-
-function appendIncludes (result, includes) {
-  for (let include of includes) {
-    if (include) {
-      Object.assign (result, include);
-    }
-  }
-  return result;
-}
-
-function resolveIncludes (style, theme) {
-  if (style.includes) {
-    let result = {};
-    const names = Object.getOwnPropertyNames (style);
-    for (let name of names) {
-      if (name === 'includes') {
-        result = appendIncludes (result, style.includes.map (include => theme.styles[include]));
-      } else {
-        result[name] = style[name];
-      }
-    }
-    return result;
-  }
-  return style;
-}
-
-function resolveLocalStyle (styleMap, localStyle, theme, list) {
-  if (Array.isArray (localStyle)) {
-    let result = {};
-    localStyle.forEach (x => {
-      result = {...result, ...resolveLocalStyle (styleMap, x, theme, list)};
-    });
-    return result;
-  }
-  if (typeof localStyle === 'string') {
-    localStyle = styleMap[localStyle];
-  }
-  if (!localStyle) {
-    return {};
-  }
-  if (typeof localStyle === 'object') {
-    const style = resolveIncludes (localStyle, theme);
-    if (list) {
-      list.push (style);
-    }
-    return style;
-  }
-
-  throw `Unsupported type for style ${localStyle}`;
-}
+import {resolveLocalStyle} from './resolve-local-style.js';
 
 /******************************************************************************/
 
@@ -90,20 +40,11 @@ export class Styles {
   }
 
   get (props) {
-    const list = [];
-    this.with (list, 'base');
-    this.with (list, props.kind);
-    this.with (list, props.styles);
-    this.with (list, props.style);
-    return list;
+    return this.resolve ('base', props.kind, props.styles, props.style);
   }
 
   resolve (...names) {
     return resolveLocalStyle (this.styles, names, this._cacheTheme);
-  }
-
-  with (list, ...local) {
-    resolveLocalStyle (this.styles, local, this._cacheTheme, list);
   }
 
   static create (def) {

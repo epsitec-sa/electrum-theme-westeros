@@ -27,13 +27,9 @@ Usually, you won't want to interact with the `Styles` class directly, but
 rather rely on following `Electrum` injected functions on the component
 instance:
 
-* Method `this.resolveStyle()` forwards to `styles.resolve()`
-* Property `this.styles` returns a contextual array of style objects,
-  depending on the `props` found on the component instance.
-
-Futhermore, you can use `this.styles.with (name1, name2, ...)` to apply
-additional styles to the array of style objects, by appending the named
-styles. Internally, this relies on `styles.with()` and `styles.resolve()`.
+* On a component, `this.resolveStyle()` forwards to `styles.resolve()`
+* On a component, `this.styles` returns a contextual array of style
+  objects, depending on the `props` found on the component instance.
 
 ## Resolving a specific style
 
@@ -145,6 +141,25 @@ export default function (theme) {
       position: 'fixed',
       includes: ['fullSize'],  // <-- include style fullSize here
       backgroundColor: theme.palette.canvasColor
+    }
+  };
+}
+```
+
+## Computed style properties
+
+Styles properties can be defined as functions, which can modify the
+style when they get applied:
+
+```javascript
+export default function (theme) {
+  return {
+    base: {
+      height: theme.spacing.lineHeight,
+      // ...
+    },
+    small: {
+      height: style => style.height * 0.8 // property defined as a function
     }
   };
 }
