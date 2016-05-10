@@ -287,21 +287,11 @@ export default {
   darkWhite:    'rgba(255,255,255,0.87)',
   lightWhite:   'rgba(255,255,255,0.54)',
 
-  /* colors defined by Daniel Roux -- to be renamed */
+  /* colors defined by Daniel Roux */
 
   // Couleurs de base définies par Gilles :
-  base:       '#336799',
-  light:      '#ffffff',
-  dark:       '#222222',
-
-  // Couleurs turquoises :
-  // base:       '#33997e',
-  // light:      '#f2fffc',
-  // dark:       '#10372c',
-
-  // Couleurs pastels inversées :
-  // base:       '#feebff',
-  // light:      '#39173b',
-  // dark:       '#ffffff',
+  base:  '#336799',
+  light: '#ffffff',
+  dark:  '#222222',
 
 };

@@ -6,7 +6,7 @@ export default function (spacing) { /*jshint unused:false */
   return {
     defaultBorderRadius: 2,
 
-    /* geometry settings defined by Daniel Roux - to be renamed */
+    /* geometry settings defined by Daniel Roux */
 
     lineHeight:            spacing.lineHeight,
     containerMargin:       spacing.containerMargin,

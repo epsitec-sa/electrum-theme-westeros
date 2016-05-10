@@ -4,7 +4,7 @@ export default {
   iconSize: 24,
   desktopKeylineIncrement: 64,
 
-  /* geometry settings defined by Daniel Roux - to be renamed */
+  /* geometry settings defined by Daniel Roux */
 
   // Géométrie définie par Gilles:
   lineHeight:      '32px',
