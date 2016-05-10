@@ -151,8 +151,8 @@ function getLuminance (color) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function emphasize (color, coefficient = 0.15) {
-  if (color === null) {
-    return null;
+  if (!color) {
+    return color;
   }
   return getLuminance (color) > 0.5 ?
     darken (color, coefficient) :
@@ -168,8 +168,8 @@ function emphasize (color, coefficient = 0.15) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function fade (color, value) {
-  if (color === null) {
-    return null;
+  if (!color) {
+    return color;
   }
   color = decomposeColor (color);
   value = clamp (value, 0, 1);
@@ -190,8 +190,8 @@ function fade (color, value) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function darken (color, coefficient) {
-  if (color === null) {
-    return null;
+  if (!color) {
+    return color;
   }
   color = decomposeColor (color);
   coefficient = clamp (coefficient, 0, 1);
@@ -214,8 +214,8 @@ function darken (color, coefficient) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function lighten (color, coefficient) {
-  if (color === null) {
-    return null;
+  if (!color) {
+    return color;
   }
   color = decomposeColor (color);
   coefficient = clamp (coefficient, 0, 1);
