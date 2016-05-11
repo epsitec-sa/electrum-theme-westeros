@@ -21,7 +21,12 @@ which are then used to build following higher level constructs:
 The theme is provided to all _linked_ electrum components through the
 `theme` property.
 
-## Styles class
+# Styles class
+
+* `styles` &rarr; cached style object.
+* `usesProps` &rarr; `true` if the style function expects properties.  
+
+## API surfaced in electrum components
 
 Usually, you won't want to interact with the `Styles` class directly, but
 rather rely on following `Electrum` injected functions on the component

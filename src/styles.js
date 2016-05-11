@@ -21,22 +21,29 @@ export class Styles {
     this._defUsesProps = def.length === 2;
     this._cacheStyles = null;
     this._cacheTheme  = null;
+    this._cacheProps  = null;
     this._theme = null;
   }
 
   apply (theme, props) {
     if (this._cacheTheme !== theme) {
       if (this._defUsesProps) {
+        // TODO: compare props and decide whether to recompute the styles
         this._cacheStyles = this._def (theme, props);
+        this._cacheProps = props;
         this._cacheTheme = null; // recompute styles every time - disable the cache
-        this._theme = theme;
       } else {
         this._cacheStyles = this._def (theme);
+        this._cacheProps = null;
         this._cacheTheme = theme;
-        this._theme = theme;
       }
+      this._theme = theme;
     }
     return this;
+  }
+  
+  get usesProps () {
+    return this._defUsesProps;
   }
 
   get styles () {
