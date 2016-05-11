@@ -33,7 +33,7 @@ export default function (colors) {
     mainTabButtonActiveBackground:   colors.light,
 
     viewTabBackground:               colors.dark,
-    viewTabButtonInactiveBackground: lighten (colors.dark, 0.2),
+    viewTabButtonInactiveBackground: lighten (colors.dark, 0.3),
     viewTabButtonActiveBackground:   darken (colors.light, 0.05),
 
     actionBackground:                colors.light,
