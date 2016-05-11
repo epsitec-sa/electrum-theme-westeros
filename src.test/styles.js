@@ -7,7 +7,7 @@ const theme = Theme.create ('default');
 
 const def1 = (theme) => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
 const def2 = (theme, props) => ({base: {size: props.size || 10}, small: {size: 5}});
-const def3 = (theme) => ({a: {x: 10, n: 'a'}, b: {y: 20, n: 'b'}, c: {x: 11, y: 22}});
+const def3 = () => ({a: {x: 10, n: 'a'}, b: {y: 20, n: 'b'}, c: {x: 11, y: 22}});
 
 describe ('Style', () => {
   describe ('create()', () => {

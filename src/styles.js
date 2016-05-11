@@ -14,9 +14,8 @@ export class Styles {
       throw new Error ('Do not call Styles constructor directly; use Styles.create instead');
     }
     if (typeof def !== 'function' ||
-        def.length < 1 ||
         def.length > 2) {
-      throw new Error ('Styles must be defined by a function taking 1 or 2 arguments');
+      throw new Error ('Styles must be defined by a function taking 0, 1 or 2 arguments: (theme, props) => {}');
     }
     this._def = def;
     this._defUsesProps = def.length === 2;
