@@ -22,6 +22,7 @@ export class Styles {
     this._defUsesProps = def.length === 2;
     this._cacheStyles = null;
     this._cacheTheme  = null;
+    this._theme = null;
   }
 
   apply (theme, props) {
@@ -29,9 +30,11 @@ export class Styles {
       if (this._defUsesProps) {
         this._cacheStyles = this._def (theme, props);
         this._cacheTheme = null; // recompute styles every time - disable the cache
+        this._theme = theme;
       } else {
         this._cacheStyles = this._def (theme);
         this._cacheTheme = theme;
+        this._theme = theme;
       }
     }
     return this;
@@ -42,7 +45,11 @@ export class Styles {
   }
 
   resolve (...names) {
-    return resolveLocalStyle (this.styles, names, this._cacheTheme);
+    return resolveLocalStyle (this.styles, names, this._theme);
+  }
+  
+  merge (current, ...names) {
+    return resolveLocalStyle (this.styles, names, this._theme, current);
   }
 
   static create (def) {
