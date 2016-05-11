@@ -63,7 +63,9 @@ export class Styles {
       return () => ({});
     }
     const styles = new Styles (secretKey, def);
-    return (theme, props) => styles.apply (theme, props);
+    const resolver = (theme, props) => styles.apply (theme, props);
+    resolver.styles = styles;
+    return resolver;
   }
 }
 
