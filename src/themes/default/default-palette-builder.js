@@ -54,7 +54,7 @@ export default function (colors) {
     infoBackground:                  darken (colors.light, 0.1),
     buttonBackground:                lighten (colors.light, 0.5),
     buttonBorder:                    lighten (colors.dark, 0.5),
-    labelButtonBackground:           darken (colors.light, 0.1),
+    labelButtonBackground:           darken (colors.light, 0.05),
 
     badgeBackground:                 colors.badge,
     badgeText:                       emphasize (colors.badge, 1.0),
