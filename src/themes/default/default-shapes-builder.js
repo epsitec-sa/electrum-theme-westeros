@@ -38,7 +38,8 @@ export default function (spacing) { /*jshint unused:false */
     labelTextSize:         '100%',
     labelTitleTextSize:    '125%',
 
-    badgeRadius:           Unit.multiply (spacing.lineHeight, 0.3),
+    badgeHeight:           Unit.multiply (spacing.lineHeight, 0.5),
+    badgeRadius:           Unit.multiply (spacing.lineHeight, 0.1),
     badgeTextSize:         '70%',
 
   };
