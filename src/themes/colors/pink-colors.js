@@ -5,5 +5,6 @@ export default {
   base:  '#feebff',
   light: '#39173b',
   dark:  '#ffffff',
+  badge: '#8700ff'
 
 };

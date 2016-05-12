@@ -5,7 +5,6 @@ export default {
   desktopKeylineIncrement: 64,
 
   /* geometry settings defined by Daniel Roux */
-
   // Géométrie compacte:
   lineHeight:      '25px',
   containerMargin: '10px',

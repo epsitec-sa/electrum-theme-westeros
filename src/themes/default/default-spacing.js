@@ -6,19 +6,8 @@ export default {
 
   /* geometry settings defined by Daniel Roux */
 
-  // Géométrie définie par Gilles:
   lineHeight:      '32px',
   containerMargin: '20px',
   lineSpacing:     '10px',
-
-  // Géométrie compacte:
-  // lineHeight:      '25px',
-  // containerMargin: '10px',
-  // lineSpacing:     '5px',
-
-  // Grands champs serrés:
-  // lineHeight:      '30px',
-  // containerMargin: '10px',
-  // lineSpacing:     '-1px',
 
 };

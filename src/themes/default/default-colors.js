@@ -293,5 +293,6 @@ export default {
   base:  '#336799',
   light: '#ffffff',
   dark:  '#222222',
+  badge: '#ff0000'
 
 };
