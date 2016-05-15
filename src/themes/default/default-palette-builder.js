@@ -31,10 +31,12 @@ export default function (colors) {
     mainTabBackground:               darken (colors.light, 0.2),
     mainTabButtonInactiveBackground: darken (colors.light, 0.1),
     mainTabButtonActiveBackground:   colors.light,
+    mainTabText:                     emphasize (colors.light, 0.6),
 
     viewTabBackground:               colors.dark,
     viewTabButtonInactiveBackground: lighten (colors.dark, 0.3),
     viewTabButtonActiveBackground:   darken (colors.light, 0.05),
+    viewTabIcon:                     emphasize (colors.dark, 0.5),
 
     actionBackground:                colors.light,
     actionButtonBackground:          colors.base,
@@ -46,6 +48,7 @@ export default function (colors) {
     viewBackground:                  darken (colors.light, 0.05),
 
     paneNavigatorBackground:         darken (colors.light, 0.05),
+    paneNavigatorInactiveText:       emphasize (colors.light, 0.4),
     paneNavigatorInactiveBorder:     emphasize (colors.light, 0.2),
     paneNavigatorActiveBorder:       emphasize (colors.light, 0.8),
     paneBackground:                  colors.light,
