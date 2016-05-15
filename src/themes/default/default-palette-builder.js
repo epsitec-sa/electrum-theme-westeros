@@ -25,8 +25,8 @@ export default function (colors) {
 
     taskBackground:                  colors.base,
     taskLogoBackground:              colors.light,
-    taskButtonBorderColor:           darken (colors.base, 0.3),
-    taskButtonBackgroundColor:       colors.base,
+    taskButtonBorder:                darken (colors.base, 0.3),
+    taskButtonBackground:            colors.base,
 
     mainTabBackground:               darken (colors.light, 0.2),
     mainTabButtonInactiveBackground: darken (colors.light, 0.1),
@@ -52,7 +52,7 @@ export default function (colors) {
     paneNavigatorInactiveBorder:     emphasize (colors.light, 0.2),
     paneNavigatorActiveBorder:       emphasize (colors.light, 0.8),
     paneBackground:                  colors.light,
-    paneNavigatorBorderHoverColor:   colors.base,
+    paneNavigatorBorderHover:        colors.base,
 
     text:                            lighten (colors.dark, 0.2),
     infoBackground:                  darken (colors.light, 0.1),
