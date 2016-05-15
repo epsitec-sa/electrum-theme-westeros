@@ -36,7 +36,7 @@ export default function (colors) {
     viewTabBackground:               colors.dark,
     viewTabButtonInactiveBackground: lighten (colors.dark, 0.3),
     viewTabButtonActiveBackground:   darken (colors.light, 0.05),
-    viewTabIcon:                     emphasize (colors.dark, 0.5),
+    viewTabGlyph:                    emphasize (colors.dark, 0.5),
 
     actionBackground:                colors.light,
     actionButtonBackground:          colors.base,
@@ -59,6 +59,11 @@ export default function (colors) {
     buttonBackground:                lighten (colors.light, 0.5),
     buttonBorder:                    lighten (colors.dark, 0.5),
     labelButtonBackground:           darken (colors.light, 0.05),
+
+    buttonDisableBorder:             emphasize (colors.dark, 0.5),
+    buttonDisableBackground:         emphasize (colors.dark, 0.8),
+    buttonDisableGlyph:              emphasize (colors.dark, 0.5),
+    buttonDisableText:               emphasize (colors.dark, 0.5),
 
     badgeBackground:                 colors.badge,
     badgeText:                       emphasize (colors.badge, 1.0),
