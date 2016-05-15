@@ -19,6 +19,7 @@ export default function (spacing) { /*jshint unused:false */
     taskShadow:            '0px 0px 60px rgba(0, 0, 0, 0.50)',
 
     mainTabHeight:         Unit.multiply (spacing.lineHeight, 1.5),
+    mainTabTriangleSize:   Unit.multiply (spacing.lineHeight, 0.2),
     mainTabTextSize:       '125%',
 
     viewTabHeight:         Unit.multiply (spacing.lineHeight, 1.0),
