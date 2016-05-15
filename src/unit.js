@@ -26,8 +26,8 @@ function add (a, b) {
     return a + b;
   }
   if (a.endsWith ('px') && b.endsWith ('px')) {
-    const aa = a.substring (0, a.length - 2);
-    const bb = b.substring (0, b.length - 2);
+    const aa = parseInt (a.substring (0, a.length - 2));
+    const bb = parseInt (b.substring (0, b.length - 2));
     return (aa + bb) + 'px';
   } else {
     throw new Error (`Values '${a}' or '${b}' has an unexpected format`);
@@ -39,8 +39,8 @@ function sub (a, b) {
     return a - b;
   }
   if (a.endsWith ('px') && b.endsWith ('px')) {
-    const aa = a.substring (0, a.length - 2);
-    const bb = b.substring (0, b.length - 2);
+    const aa = parseInt (a.substring (0, a.length - 2));
+    const bb = parseInt (b.substring (0, b.length - 2));
     return (aa - bb) + 'px';
   } else {
     throw new Error (`Values '${a}' or '${b}' has an unexpected format`);
