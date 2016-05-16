@@ -1,52 +1,71 @@
 'use strict';
 
+/******************************************************************************/
+
+const units = ['px', 'rem', 'em', '%', 'vmax', 'vmin', 'vh', 'vw'];
+
+/******************************************************************************/
+
+function parse (value) {
+  if (typeof value === 'number') {
+    return {value, unit: 'px'};
+  }
+  for (let unit of units) {
+    if (value.endsWith (unit)) {
+      value = value.substring (0, value.length - unit.length);
+      if (value.includes ('.')) {
+        value = parseFloat (value);
+      } else {
+        value = parseInt (value);
+      }
+      return {value, unit};
+    }
+  }
+  throw new Error (`Value '${value}' has an unexpected format`);
+}
+
+/******************************************************************************/
+
 function multiply (value, factor) {
   if (typeof value === 'number') {
     return value * factor;
   }
-  if (value.endsWith ('px')) {
-    const v = value.substring (0, value.length - 2);
-    return v * factor + 'px';
-  } else if (value.endsWith ('em')) {
-    const v = value.substring (0, value.length - 2);
-    return v * factor + 'em';
-  } else if (value.endsWith ('rem')) {
-    const v = value.substring (0, value.length - 3);
-    return v * factor + 'rem';
-  } else if (value.endsWith ('%')) {
-    const v = value.substring (0, value.length - 1);
-    return v * factor + '%';
-  } else {
-    throw new Error (`Value '${value}' has an unexpected format`);
-  }
+  const num = parse (value);
+  return num.value * factor + num.unit;
 }
+
+/******************************************************************************/
 
 function add (a, b) {
   if (typeof a === 'number' && typeof b === 'number') {
     return a + b;
   }
-  if (a.endsWith ('px') && b.endsWith ('px')) {
-    const aa = parseInt (a.substring (0, a.length - 2));
-    const bb = parseInt (b.substring (0, b.length - 2));
-    return (aa + bb) + 'px';
+  const numA = parse (a);
+  const numB = parse (b);
+  if (numA.unit === numB.unit) {
+    return (numA.value + numB.value) + numA.unit;
   } else {
-    throw new Error (`Values '${a}' or '${b}' has an unexpected format`);
+    throw new Error (`Values '${a}' and '${b}' have incompatible format`);
   }
 }
+
+/******************************************************************************/
 
 function sub (a, b) {
   if (typeof a === 'number' && typeof b === 'number') {
     return a - b;
   }
-  if (a.endsWith ('px') && b.endsWith ('px')) {
-    const aa = parseInt (a.substring (0, a.length - 2));
-    const bb = parseInt (b.substring (0, b.length - 2));
-    return (aa - bb) + 'px';
+  const numA = parse (a);
+  const numB = parse (b);
+  if (numA.unit === numB.unit) {
+    return (numA.value - numB.value) + numA.unit;
   } else {
-    throw new Error (`Values '${a}' or '${b}' has an unexpected format`);
+    throw new Error (`Values '${a}' and '${b}' have incompatible format`);
   }
 }
 
+/******************************************************************************/
+
 module.exports = {
-  multiply, add, sub
+  multiply, add, sub, parse
 };
