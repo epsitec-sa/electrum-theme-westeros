@@ -1,6 +1,6 @@
 'use strict';
 
-import {Unit} from 'electrum-theme';
+import Unit from '../unit.js';
 
 export default function (spacing) { /*jshint unused:false */
   return {
