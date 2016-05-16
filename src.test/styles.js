@@ -91,7 +91,7 @@ describe ('Style', () => {
       const styles = Styles.create (def) (theme);
       expect (styles.resolve ('a', 'b')).to.deep.equal ({x: 10, n: 'b', y: 20});
     });
-    
+
     it ('merges nested properties', () => {
       const def = (theme) => ({
         a: {x: 10, y: {f: 'f', g: 'A'}},
@@ -100,7 +100,7 @@ describe ('Style', () => {
       const styles = Styles.create (def) (theme);
       expect (styles.resolve ('a', 'b')).to.deep.equal ({x: 10, y: {f: 'f', g: 'B', h: 'h', xx: 5}});
     });
-    
+
     it ('undefines null properties', () => {
       const def = (theme) => ({
         a: {x: 10, y: 10},
@@ -138,7 +138,7 @@ describe ('Style', () => {
     });
 
     it ('executes functions in props.styles', () => {
-      const props = {styles: {size: s => s.size+2}};
+      const props = {styles: {size: s => s.size + 2}};
       expect (customResolve (styles, props)).to.deep.equal ({size: 12, face: 'Roboto, sans-serif'});
     });
 
