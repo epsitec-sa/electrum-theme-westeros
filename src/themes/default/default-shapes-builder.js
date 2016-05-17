@@ -15,7 +15,9 @@ export default function (spacing) { /*jshint unused:false */
     taskButtonWidth:       Unit.multiply (spacing.lineHeight, 2.5),
     taskButtonHeight:      Unit.multiply (spacing.lineHeight, 3.0),
     taskLogoTextSize:      '125%',
+    taskLogoGlyphSize:     '200%',
     taskTextSize:          '80%',
+    taskGlyphSize:         '125%',
     taskShadow:            '0px 0px 60px rgba(0, 0, 0, 0.50)',
 
     mainTabHeight:         Unit.multiply (spacing.lineHeight, 1.5),
@@ -30,10 +32,12 @@ export default function (spacing) { /*jshint unused:false */
 
     footerHeight:          Unit.multiply (spacing.lineHeight, 2.0),
     footerTextSize:        '100%',
+    footerGlyphSize:       '150%',
 
     actionHeight:          Unit.multiply (spacing.lineHeight, 1.5),
     actionRadius:          Unit.multiply (spacing.lineHeight, 0.75),
     actionTextSize:        '100%',
+    actionGlyphSize:       '120%',
 
     buttonTextSize:        '100%',
     labelTextSize:         '100%',
