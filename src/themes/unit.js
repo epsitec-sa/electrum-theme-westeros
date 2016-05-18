@@ -7,11 +7,16 @@ const units = ['px', 'rem', 'em', '%', 'vmax', 'vmin', 'vh', 'vw'];
 /******************************************************************************/
 
 function fix (value, decimals) {
-  if (typeof decimals === 'number') {
-    return value.toFixed (decimals);
-  } else {
-    return value;
+  if (typeof decimals !== 'string') {
+    if (typeof decimals === 'number') {
+      if (decimals >= 0 && decimals <= 20) {
+        return value.toFixed (decimals);  // return a string
+      }
+    } else {
+      return value;  // return the initial value
+    }
   }
+  throw new Error (`Invalid number of decimals '${decimals}'`);
 }
 
 /******************************************************************************/

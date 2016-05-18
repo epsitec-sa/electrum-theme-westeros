@@ -34,6 +34,13 @@ describe ('Unit', () => {
       expect (Unit.fix (5.1, 2)).to.equal ('5.10');
       expect (Unit.fix (5.1, 3)).to.equal ('5.100');
     });
+    it ('fix with .66666 numbers', () => {
+      expect (Unit.fix (5.66666, null)).to.equal (5.66666);
+      expect (Unit.fix (5.66666, 0)).to.equal ('6');
+      expect (Unit.fix (5.66666, 1)).to.equal ('5.7');
+      expect (Unit.fix (5.66666, 2)).to.equal ('5.67');
+      expect (Unit.fix (5.66666, 3)).to.equal ('5.667');
+    });
     it ('fix with .9 numbers', () => {
       expect (Unit.fix (5.9, null)).to.equal (5.9);
       expect (Unit.fix (5.9, 0)).to.equal ('6');
@@ -52,6 +59,14 @@ describe ('Unit', () => {
       expect (Unit.fix (-5.9, 1)).to.equal ('-5.9');
       expect (Unit.fix (-5.9, 2)).to.equal ('-5.90');
       expect (Unit.fix (-5.9, 3)).to.equal ('-5.900');
+    });
+    it ('fix with strange decimals', () => {
+      expect (Unit.fix (5.6666, 2.0)).to.equal ('5.67');
+      expect (Unit.fix (5.6666, 2.1)).to.equal ('5.67');
+      expect (Unit.fix (5.6666, 2.9)).to.equal ('5.67');
+      expect (() => Unit.fix (5.6666, -2)).to.throw ();
+      expect (() => Unit.fix (5.6666, 100)).to.throw ();
+      expect (() => Unit.fix (5.1, 'coucou')).to.throw ();
     });
   });
 
