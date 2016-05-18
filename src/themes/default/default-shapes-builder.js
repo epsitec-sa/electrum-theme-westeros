@@ -28,6 +28,8 @@ export default function (spacing) { /*jshint unused:false */
     viewTabHeight:         Unit.multiply (spacing.lineHeight, 1.0),
     viewTabTextSize:       '80%',
 
+    paneShadow:            '0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)',
+
     paneNavigatorHeight:   Unit.multiply (spacing.lineHeight, 1.0),
     paneNavigatorTextSize: '100%',
 
