@@ -7,12 +7,8 @@ const units = ['px', 'rem', 'em', '%', 'vmax', 'vmin', 'vh', 'vw'];
 /******************************************************************************/
 
 function fix (value, decimals) {
-  if (decimals) {
-    if (decimals === 0) {
-      return value.round ();
-    } else {
-      return value.toFixed (decimals);
-    }
+  if (typeof decimals === 'number') {
+    return value.toFixed (decimals);
   } else {
     return value;
   }
@@ -53,7 +49,7 @@ function multiply (value, factor) {
 function add (a, b, decimals = null) {
   if ((typeof a === 'number') === (typeof b === 'number')) {
     if (typeof a === 'number' && typeof b === 'number') {
-      return fix (a + b, decimals);
+      return a + b;
     }
     const numA = parse (a);
     const numB = parse (b);
@@ -69,7 +65,7 @@ function add (a, b, decimals = null) {
 function sub (a, b, decimals = null) {
   if ((typeof a === 'number') === (typeof b === 'number')) {
     if (typeof a === 'number' && typeof b === 'number') {
-      return fix (a - b, decimals);
+      return a - b;
     }
     const numA = parse (a);
     const numB = parse (b);
