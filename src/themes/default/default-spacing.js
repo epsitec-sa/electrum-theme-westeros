@@ -9,5 +9,6 @@ export default {
   lineHeight:      '32px',
   containerMargin: '20px',
   lineSpacing:     '10px',
+  viewSpacing:     '5px',
 
 };
