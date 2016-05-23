@@ -11,7 +11,6 @@ export default function (spacing) { /*jshint unused:false */
     lineHeight:            spacing.lineHeight,
     containerMargin:       spacing.containerMargin,
     lineSpacing:           spacing.lineSpacing,
-    viewSpacing:           spacing.viewSpacing,
 
     taskButtonWidth:       Unit.multiply (spacing.lineHeight, 2.5),
     taskButtonHeight:      Unit.multiply (spacing.lineHeight, 3.0),
@@ -27,6 +26,8 @@ export default function (spacing) { /*jshint unused:false */
 
     viewTabHeight:         Unit.multiply (spacing.lineHeight, 1.0),
     viewTabTextSize:       '80%',
+
+    viewSpacing:           Unit.multiply (spacing.containerMargin, 0.25),
 
     paneShadow:            '0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)',
 
