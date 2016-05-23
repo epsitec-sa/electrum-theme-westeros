@@ -67,5 +67,8 @@ export default function (colors) {
 
     badgeBackground:                 colors.badge,
     badgeText:                       emphasize (colors.badge, 1.0),
+
+    tooltipBackground:               colors.base,
+    tooltipText:                     emphasize (colors.base, 0.8),
   };
 }
