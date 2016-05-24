@@ -51,7 +51,6 @@ export default function (spacing) { /*jshint unused:false */
     badgeRadius:           Unit.multiply (spacing.lineHeight, 0.1),
     badgeTextSize:         '70%',
 
-    tooltipHeight:         Unit.multiply (spacing.lineHeight, 0.9),
     tooltipMargin:         Unit.multiply (spacing.containerMargin, 0.4),
     tooltipTextSize:       '80%',
 
