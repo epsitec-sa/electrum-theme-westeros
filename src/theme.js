@@ -1,6 +1,6 @@
 'use strict';
 
-import DefaultThemeConfig from './themes/default.js';
+import findTheme from './find-theme.js';
 
 /******************************************************************************/
 
@@ -63,11 +63,14 @@ export class Theme {
     return this._typo;
   }
 
-  static create (name, config = DefaultThemeConfig) {
+  static create (name) {
     if ((typeof name !== 'string') ||
         (name.length === 0)) {
       throw new Error ('name must be a valid string');
     }
+
+    const config = findTheme (name);
+
     const Colors      = config.Colors;
     const Spacing     = config.Spacing;
     const Timing      = config.Timing;

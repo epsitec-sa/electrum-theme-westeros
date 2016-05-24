@@ -21,6 +21,18 @@ which are then used to build following higher level constructs:
 The theme is provided to all _linked_ electrum components through the
 `theme` property.
 
+# Theme class
+
+The `Theme` class stores the information about a theme. To create an
+instance of a theme, use `Theme.create(name)` and specify one of the
+predefined theme configuration names (by default the theme named
+`default` will be used). The name can be specified as PascalCase,
+camelCase or kebab-case.
+
+```javascript
+const theme = Theme.create ('dark');
+```
+
 # Styles class
 
 * `styles` &rarr; cached style object.

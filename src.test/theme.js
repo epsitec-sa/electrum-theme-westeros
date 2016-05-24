@@ -3,8 +3,6 @@
 import {expect} from 'mai-chai';
 import {Theme} from 'electrum-theme';
 
-import DarkThemeConfig from '../src/themes/dark.js';
-
 describe ('Theme', () => {
   describe ('constructor()', () => {
     it ('cannot be called directly', () => {
@@ -33,8 +31,8 @@ describe ('Theme', () => {
     });
 
     it ('can be used with dark theme too', () => {
-      const theme = Theme.create ('default', DarkThemeConfig);
-      expect (theme).to.have.property ('name', 'default');
+      const theme = Theme.create ('dark');
+      expect (theme).to.have.property ('name', 'dark');
       expect (theme.colors).to.have.property ('red50');
       expect (theme.palette).to.have.property ('primary1Color', '#212121');
       expect (theme.shapes).to.have.property ('defaultBorderRadius');

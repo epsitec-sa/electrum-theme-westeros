@@ -1,6 +1,6 @@
 {
   "name": "electrum-theme",
-  "version": "3.5.1",
+  "version": "4.0.0",
   "description": "Electrum Theme provides basic theming support for use with electrum-arc.",
   "main": "lib/index.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "chokidar-cli": "^1.2.0",
     "generic-js-env": "^1.6.1",
     "mai-chai": "^2.6.0",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
     "require-self": "^0.1.0",
     "rimraf": "^2.5.2"
   }
