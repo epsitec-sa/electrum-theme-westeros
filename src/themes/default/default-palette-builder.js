@@ -73,9 +73,9 @@ export default function (colors) {
 
     calendarBackground:               colors.base,
     calendarButtonInactiveBackground: colors.light,
-    calendarButtonActiveBackground:   colors.base,
+    calendarButtonActiveBackground:   lighten (colors.base, 0.7),
     calendarInactiveText:             emphasize (colors.light, 1.0),
-    calendarActiveText:               emphasize (colors.base, 1.0),
+    calendarActiveText:               emphasize (lighten (colors.base, 0.7), 1.0),
     calendarHeaderText:               emphasize (colors.dark, 1.0),
   };
 }
