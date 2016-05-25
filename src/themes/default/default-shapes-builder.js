@@ -54,5 +54,9 @@ export default function (spacing) { /*jshint unused:false */
     tooltipMargin:         Unit.multiply (spacing.containerMargin, 0.4),
     tooltipTextSize:       '80%',
 
+    calendarMargin:        Unit.multiply (spacing.lineSpacing, 1.0),
+    calendarButtonSize:    Unit.multiply (spacing.lineHeight, 1.0),
+    calendarTextSize:      '100%',
+
   };
 }
