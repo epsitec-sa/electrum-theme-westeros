@@ -71,6 +71,9 @@ export default function (colors) {
     tooltipBackground:                colors.base,
     tooltipText:                      emphasize (colors.base, 1.0),
 
+    comboActiveBackground:            colors.base,
+    comboActiveGlyph:                 emphasize (colors.base, 1.0),
+
     calendarBackground:               colors.base,
     calendarButtonInactiveBackground: colors.light,
     calendarButtonActiveBackground:   lighten (colors.base, 0.7),
