@@ -57,7 +57,7 @@ export default function (spacing) { /*jshint unused:false */
     calendarMargin:        Unit.multiply (spacing.lineSpacing, 1.0),
     calendarButtonSize:    Unit.multiply (spacing.lineHeight, 1.0),
     calendarTextSize:      '80%',
-    calendarDOWSize:       '60%',
+    calendarDOWTextSize:   '60%',
     calendarGlyphSize:     '110%',
 
   };
