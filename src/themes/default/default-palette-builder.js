@@ -80,5 +80,8 @@ export default function (colors) {
     calendarInactiveText:             emphasize (colors.light, 1.0),
     calendarActiveText:               emphasize (lighten (colors.base, 0.7), 1.0),
     calendarHeaderText:               emphasize (colors.dark, 1.0),
+
+    markPrimary:                      colors.badge,
+    markSecondary:                    colors.base,
   };
 }

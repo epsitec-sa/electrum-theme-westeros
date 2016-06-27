@@ -60,5 +60,7 @@ export default function (spacing) { /*jshint unused:false */
     calendarDOWTextSize:   '60%',
     calendarGlyphSize:     '110%',
 
+    markWidth:             Unit.multiply (spacing.containerMargin, 0.5),
+
   };
 }
