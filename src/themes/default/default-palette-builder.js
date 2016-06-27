@@ -55,7 +55,7 @@ export default function (colors) {
     paneNavigatorBorderHover:         colors.base,
 
     text:                             lighten (colors.dark, 0.2),
-    infoBackground:                   darken (colors.light, 0.1),
+    infoBackground:                   darken (colors.light, 0.2),
     buttonBackground:                 lighten (colors.light, 0.5),
     buttonBorder:                     lighten (colors.dark, 0.5),
     labelButtonBackground:            darken (colors.light, 0.05),
