@@ -33,6 +33,7 @@ export default function (spacing) { /*jshint unused:false */
 
     paneNavigatorHeight:   Unit.multiply (spacing.lineHeight, 1.0),
     paneNavigatorTextSize: '100%',
+    paneHeaderTextSize:    '200%',
 
     footerHeight:          Unit.multiply (spacing.lineHeight, 2.0),
     footerTextSize:        '100%',

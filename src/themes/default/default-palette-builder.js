@@ -53,6 +53,8 @@ export default function (colors) {
     paneNavigatorActiveBorder:        emphasize (colors.light, 0.8),
     paneBackground:                   colors.light,
     paneNavigatorBorderHover:         colors.base,
+    paneHeaderBackground:             lighten (colors.dark, 0.5),
+    paneHeaderText:                   colors.light,
 
     text:                             lighten (colors.dark, 0.2),
     infoBackground:                   darken (colors.light, 0.2),
