@@ -44,6 +44,8 @@ export default function (spacing) { /*jshint unused:false */
     actionTextSize:        '100%',
     actionGlyphSize:       '120%',
 
+    subactionTextSize:     '80%',
+
     buttonTextSize:        '100%',
     labelTextSize:         '100%',
     labelTitleTextSize:    '125%',

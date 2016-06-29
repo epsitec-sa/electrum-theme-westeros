@@ -41,6 +41,9 @@ export default function (colors) {
     actionBackground:                 colors.light,
     actionButtonBackground:           colors.base,
 
+    subactionButtonBackground:        darken (colors.light, 0.1),
+    subactionButtonText:              lighten (colors.dark, 0.5),
+
     footerBackground:                 colors.dark,
     footerTextBackground:             lighten (colors.dark, 0.1),
     footerText:                       emphasize (colors.dark, 0.5),
