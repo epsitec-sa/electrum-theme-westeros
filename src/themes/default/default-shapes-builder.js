@@ -35,6 +35,8 @@ export default function (spacing) { /*jshint unused:false */
     paneNavigatorTextSize: '100%',
     paneHeaderTextSize:    '200%',
 
+    vnavigatorButtonSize:  Unit.multiply (spacing.lineHeight, 1.25),
+
     footerHeight:          Unit.multiply (spacing.lineHeight, 2.0),
     footerTextSize:        '100%',
     footerGlyphSize:       '150%',
