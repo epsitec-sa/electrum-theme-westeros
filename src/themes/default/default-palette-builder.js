@@ -74,8 +74,8 @@ export default function (colors) {
     buttonDisableGlyph:                 emphasize (colors.dark, 0.5),
     buttonDisableText:                  emphasize (colors.dark, 0.5),
 
-    badgeBackground:                    colors.badge,
-    badgeText:                          emphasize (colors.badge, 1.0),
+    badgeBackground:                    colors.alert,
+    badgeText:                          emphasize (colors.alert, 1.0),
 
     tooltipBackground:                  colors.base,
     tooltipText:                        emphasize (colors.base, 1.0),
@@ -90,7 +90,7 @@ export default function (colors) {
     calendarActiveText:                 emphasize (lighten (colors.base, 0.7), 1.0),
     calendarHeaderText:                 emphasize (colors.dark, 1.0),
 
-    markPrimary:                        colors.badge,
-    markSecondary:                      colors.base,
+    markPrimary:                        colors.alert,
+    markSecondary:                      colors.warning,
   };
 }
