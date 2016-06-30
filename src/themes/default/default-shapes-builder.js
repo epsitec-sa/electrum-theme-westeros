@@ -67,5 +67,8 @@ export default function (spacing) { /*jshint unused:false */
 
     markWidth:             Unit.multiply (spacing.containerMargin, 0.3),
 
+    menuButtonHeight:      Unit.multiply (spacing.lineHeight, 2.0),
+    menuTextSize:          '80%',
+
   };
 }

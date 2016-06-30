@@ -68,6 +68,7 @@ export default function (colors) {
     buttonBackground:                   lighten (colors.light, 0.5),
     buttonBorder:                       lighten (colors.dark, 0.5),
     labelButtonBackground:              darken (colors.light, 0.05),
+    textFieldBackground:                '#fff',  // default value for input background
 
     buttonDisableBorder:                emphasize (colors.dark, 0.5),
     buttonDisableBackground:            emphasize (colors.dark, 0.8),
