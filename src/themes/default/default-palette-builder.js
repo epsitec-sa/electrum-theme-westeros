@@ -94,5 +94,9 @@ export default function (colors) {
 
     markPrimary:                        colors.alert,
     markSecondary:                      colors.warning,
+
+    menuBackground:                     colors.dark,
+    menuItemBackground:                 lighten (colors.dark, 0.1),
+    menuItemText:                       emphasize (colors.dark, 0.5),
   };
 }
