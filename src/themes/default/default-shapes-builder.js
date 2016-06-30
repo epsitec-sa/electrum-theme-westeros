@@ -56,8 +56,8 @@ export default function (spacing) { /*jshint unused:false */
     badgeRadius:           Unit.multiply (spacing.lineHeight, 0.1),
     badgeTextSize:         '70%',
 
-    tooltipMargin:         Unit.multiply (spacing.containerMargin, 0.4),
-    tooltipTextSize:       '80%',
+    messageMargin:         Unit.multiply (spacing.containerMargin, 0.4),
+    messageTextSize:       '80%',
 
     calendarMargin:        Unit.multiply (spacing.lineSpacing, 1.0),
     calendarButtonSize:    Unit.multiply (spacing.lineHeight, 1.0),

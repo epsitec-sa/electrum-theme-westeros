@@ -77,8 +77,10 @@ export default function (colors) {
     badgeBackground:                    colors.alert,
     badgeText:                          emphasize (colors.alert, 1.0),
 
-    tooltipBackground:                  colors.base,
-    tooltipText:                        emphasize (colors.base, 1.0),
+    messageInfoBackground:              colors.base,
+    messageWarningBackground:           colors.warning,
+    messageInfoText:                    emphasize (colors.base, 1.0),
+    messageWarningText:                 emphasize (colors.warning, 1.0),
 
     comboActiveBackground:              colors.base,
     comboActiveGlyph:                   emphasize (colors.base, 1.0),
