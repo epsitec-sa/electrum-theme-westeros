@@ -99,5 +99,8 @@ export default function (colors) {
     menuBackground:                     colors.dark,
     menuItemBackground:                 lighten (colors.dark, 0.1),
     menuItemText:                       emphasize (colors.dark, 0.5),
+
+    flyingBalloonBackground:            colors.dark,
+    flyingBalloonText:                  colors.light,
   };
 }
