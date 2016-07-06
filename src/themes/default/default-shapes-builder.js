@@ -60,10 +60,12 @@ export default function (spacing) { /*jshint unused:false */
     messageTextSize:           '80%',
 
     calendarMargin:            Unit.multiply (spacing.lineSpacing, 1.0),
-    calendarButtonSize:        Unit.multiply (spacing.lineHeight, 1.0),
+    calendarButtonWidth:       Unit.multiply (spacing.lineHeight, 1.2),
+    calendarButtonHeight:      Unit.multiply (spacing.lineHeight, 1.0),
     calendarTextSize:          '80%',
-    calendarDOWTextSize:       '60%',
+    calendarDOWTextSize:       '80%',
     calendarGlyphSize:         '110%',
+    calendarShadow:            '0px 0px 10px rgba(0, 0, 0, 0.50)',
 
     markWidth:                 Unit.multiply (spacing.containerMargin, 0.3),
 
