@@ -6,9 +6,9 @@ export default {
 
   /* geometry settings defined by Daniel Roux */
   // Géométrie compacte:
-  lineHeight:      '25px',
-  containerMargin: '10px',
-  lineSpacing:     '5px',
-  smoothRadius:    '2px',
+  lineHeight:      '32px',
+  containerMargin: '20px',
+  lineSpacing:     '10px',
+  smoothRadius:    '8px',
 
 };

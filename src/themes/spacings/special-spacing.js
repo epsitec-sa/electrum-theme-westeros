@@ -9,5 +9,6 @@ export default {
   lineHeight:      '30px',
   containerMargin: '10px',
   lineSpacing:     '-1px',
+  smoothRadius:    '0px',
 
 };
