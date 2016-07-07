@@ -39,6 +39,7 @@ export default function (colors) {
     viewTabGlyph:                       emphasize (colors.dark, 0.5),
 
     actionBackground:                   colors.light,
+    actionBorder:                       emphasize (colors.light, 0.2),
     actionButtonBackground:             colors.base,
 
     subactionButtonBackground:          darken (colors.light, 0.1),

@@ -46,6 +46,7 @@ export default function (spacing) { /*jshint unused:false */
     actionRadius:              Unit.multiply (spacing.lineHeight, 0.75),
     actionTextSize:            '100%',
     actionGlyphSize:           '120%',
+    actionShadow:              '0px 0px 50px rgba(0, 0, 0, 0.20)',
 
     subactionTextSize:         '80%',
 
