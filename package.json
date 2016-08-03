@@ -11,7 +11,8 @@
     "mocha": "mocha lib.test/**/*.js",
     "prepublish": "npm run compile",
     "test": "npm run compile && npm run mocha",
-    "watch": "chokidar \"src/**/*.js\" -c \"npm run rebuild\""
+    "watch": "chokidar \"src/**/*.js\" -c \"npm run rebuild\"",
+    "startcraft": "npm run clean && npm run babel"
   },
   "repository": {
     "type": "git",
