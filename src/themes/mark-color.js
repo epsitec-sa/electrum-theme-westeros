@@ -5,7 +5,7 @@
 // Return the color to use from a value of a property.
 // You can use a direct color '#rrggbb' or the key word 'primary' or 'secondary'.
 // In this cases, the color is defined into theme.palette.
-function GetMarkColor (theme, mark) {
+function GetColor (theme, mark) {
   if (mark.startsWith ('#')) {
     return mark;
   } else {
@@ -18,5 +18,5 @@ function GetMarkColor (theme, mark) {
 }
 
 module.exports = {
-  GetMarkColor,
+  GetColor,
 };
