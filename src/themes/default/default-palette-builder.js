@@ -42,6 +42,10 @@ export default function (colors) {
     actionBorder:                       emphasize (colors.light, 0.2),
     actionButtonBackground:             colors.base,
 
+    roundButtonText:                    colors.light,
+    roundButtonGlyph:                   colors.light,
+    roundButtonBackground:              darken (colors.light, 0.2),
+
     subactionButtonBackground:          darken (colors.light, 0.1),
     subactionButtonText:                lighten (colors.dark, 0.5),
 
