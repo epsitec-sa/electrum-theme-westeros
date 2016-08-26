@@ -112,5 +112,6 @@ export default function (colors) {
 
     ticketsBackground:                  emphasize (colors.light, 0.05),
     ticketBackground:                   colors.light,
+    ticketHeaderBackground:             lighten (colors.base, 0.7),
   };
 }
