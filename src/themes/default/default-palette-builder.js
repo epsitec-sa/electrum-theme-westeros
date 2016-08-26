@@ -109,5 +109,8 @@ export default function (colors) {
 
     flyingBalloonBackground:            colors.dark,
     flyingBalloonText:                  colors.light,
+
+    ticketsBackground:                  emphasize (colors.light, 0.05),
+    ticketBackground:                   colors.light,
   };
 }
