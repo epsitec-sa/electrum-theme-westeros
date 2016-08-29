@@ -78,9 +78,10 @@ export default function (spacing) { /*jshint unused:false */
     flyingBalloonTextSize:     '80%',
     flyingBalloonPadding:      spacing.lineSpacing,
 
-    ticketVerticalSpacing:     '2px',
+    ticketVerticalSpacing:     '1px',
     ticketPadding:             spacing.lineSpacing,
     ticketCornerRadius:        '10px',
     ticketLineRadius:          '3px',
+    ticketShadowShift:         '2px',
   };
 }
