@@ -77,5 +77,10 @@ export default function (spacing) { /*jshint unused:false */
     flyingBalloonTriangleSize: Unit.multiply (spacing.lineHeight, 0.3),
     flyingBalloonTextSize:     '80%',
     flyingBalloonPadding:      spacing.lineSpacing,
+
+    ticketVerticalSpacing:     '2px',
+    ticketPadding:             spacing.lineSpacing,
+    ticketCornerRadius:        '10px',
+    ticketLineRadius:          '3px',
   };
 }
