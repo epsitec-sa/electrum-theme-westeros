@@ -46,6 +46,10 @@ export default function (colors) {
     roundButtonGlyph:                   colors.light,
     roundButtonBackground:              emphasize (colors.light, 0.2),
 
+    identityButtonText:                 colors.dark,
+    identityButtonGlyph:                colors.dark,
+    identityButtonBackground:           colors.light,
+
     subactionButtonBackground:          darken (colors.light, 0.1),
     subactionButtonText:                lighten (colors.dark, 0.5),
 

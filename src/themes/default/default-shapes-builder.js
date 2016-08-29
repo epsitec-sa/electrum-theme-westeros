@@ -83,5 +83,8 @@ export default function (spacing) { /*jshint unused:false */
     ticketCornerRadius:        '10px',
     ticketLineRadius:          '3px',
     ticketShadowShift:         '2px',
+
+    identityHeight:            '50px',
+    identityGlyphSize:         '200%',
   };
 }
