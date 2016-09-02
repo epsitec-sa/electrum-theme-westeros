@@ -20,6 +20,9 @@ export default function (spacing) { /*jshint unused:false */
     taskTextSize:              '80%',
     taskGlyphSize:             '125%',
     taskShadow:                '0px 0px 60px rgba(0, 0, 0, 0.50)',
+    taskSeparatorHeight:       Unit.multiply (spacing.lineHeight, 0.5),
+    taskLabelTopMargin:        Unit.multiply (spacing.lineSpacing, 4.0),
+    taskLabelBottomMargin:     Unit.multiply (spacing.lineSpacing, 1.0),
 
     taskTabHeight:             Unit.multiply (spacing.lineHeight, 1.5),
     taskTabLeftMargin:         spacing.containerMargin,

@@ -27,6 +27,8 @@ export default function (colors) {
     taskLogoBackground:                 colors.light,
     taskButtonBorder:                   darken (colors.base, 0.3),
     taskButtonBackground:               colors.base,
+    taskSeparatorBackground:            darken (colors.base, 0.4),
+    taskLabelText:                      darken (colors.dark, 1.0),
 
     taskTabInactiveBackground:          colors.base,
     taskTabInactiveText:                emphasize (colors.base, 1.0),
