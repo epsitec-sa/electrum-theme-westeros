@@ -21,6 +21,11 @@ export default function (spacing) { /*jshint unused:false */
     taskGlyphSize:             '125%',
     taskShadow:                '0px 0px 60px rgba(0, 0, 0, 0.50)',
 
+    taskTabHeight:             Unit.multiply (spacing.lineHeight, 1.5),
+    taskTabLeftMargin:         spacing.containerMargin,
+    taskTabTextSize:           '100%',
+    taskTabGlyphSize:          '100%',
+
     mainTabHeight:             Unit.multiply (spacing.lineHeight, 1.5),
     mainTabTriangleSize:       Unit.multiply (spacing.lineHeight, 0.2),
     mainTabTextSize:           '125%',

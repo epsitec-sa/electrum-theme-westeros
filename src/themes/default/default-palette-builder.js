@@ -28,6 +28,11 @@ export default function (colors) {
     taskButtonBorder:                   darken (colors.base, 0.3),
     taskButtonBackground:               colors.base,
 
+    taskTabInactiveBackground:          colors.base,
+    taskTabInactiveText:                emphasize (colors.base, 1.0),
+    taskTabActiveBackground:            emphasize (colors.base, 0.3),
+    taskTabActiveText:                  emphasize (emphasize (colors.base, 0.3), 1.0),
+
     mainTabBackground:                  darken (colors.light, 0.2),
     mainTabButtonInactiveBackground:    darken (colors.light, 0.1),
     mainTabButtonActiveBackground:      colors.light,
