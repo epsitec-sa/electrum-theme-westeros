@@ -125,5 +125,8 @@ export default function (colors) {
     ticketBackground:                   colors.light,
     ticketHeaderBackground:             lighten (colors.base, 0.6),
     ticketShadow:                       emphasize (colors.light, 0.1),
+
+    warningBackground:                  colors.warning,
+    warningText:                        colors.dark,
   };
 }

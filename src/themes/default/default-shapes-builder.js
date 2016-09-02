@@ -95,5 +95,9 @@ export default function (spacing) { /*jshint unused:false */
 
     identityHeight:            '50px',
     identityGlyphSize:         '200%',
+
+    warningLeftPadding:        spacing.containerMargin,
+    warningTextSize:           '100%',
+    warningGlyphSize:          '100%',
   };
 }
