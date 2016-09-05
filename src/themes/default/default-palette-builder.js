@@ -128,5 +128,7 @@ export default function (colors) {
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
+
+    dialogBackground:                   colors.light,
   };
 }

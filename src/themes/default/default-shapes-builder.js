@@ -99,5 +99,8 @@ export default function (spacing) { /*jshint unused:false */
     warningLeftPadding:        spacing.containerMargin,
     warningTextSize:           '100%',
     warningGlyphSize:          '100%',
+
+    dialogPadding:             Unit.multiply (spacing.containerMargin, 2.0),
+    dialogShadow:              '0px 20px 100px rgba(0, 0, 0, 0.8)',
   };
 }
