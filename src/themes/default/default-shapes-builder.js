@@ -61,6 +61,7 @@ export default function (spacing) { /*jshint unused:false */
     buttonTextSize:            '100%',
     labelTextSize:             '100%',
     labelTitleTextSize:        '125%',
+    labelBigTextSize:          '160%',
 
     badgeHeight:               Unit.multiply (spacing.lineHeight, 0.5),
     badgeRadius:               Unit.multiply (spacing.lineHeight, 0.1),
