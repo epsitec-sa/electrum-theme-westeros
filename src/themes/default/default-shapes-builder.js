@@ -14,9 +14,9 @@ export default function (spacing) { /*jshint unused:false */
     smoothRadius:              spacing.smoothRadius,
 
     taskButtonWidth:           Unit.multiply (spacing.lineHeight, 2.5),
-    taskButtonHeight:          Unit.multiply (spacing.lineHeight, 3.0),
-    taskLogoTextSize:          '125%',
-    taskLogoGlyphSize:         '200%',
+    taskButtonHeight:          Unit.multiply (spacing.lineHeight, 2.5),
+    taskLogoTextSize:          '100%',
+    taskLogoGlyphSize:         '150%',
     taskTextSize:              '80%',
     taskGlyphSize:             '125%',
     taskShadow:                '0px 0px 60px rgba(0, 0, 0, 0.50)',
