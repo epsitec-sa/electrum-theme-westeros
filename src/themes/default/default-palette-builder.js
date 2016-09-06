@@ -130,5 +130,8 @@ export default function (colors) {
     warningText:                        colors.dark,
 
     dialogBackground:                   colors.light,
+
+    loginBackground:                    colors.light,
+    loginSecondary:                     emphasize (colors.light, 0.3),
   };
 }

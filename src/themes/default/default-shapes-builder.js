@@ -107,5 +107,7 @@ export default function (spacing) { /*jshint unused:false */
     loginShadow:               '0px 10px 100px rgba(0, 0, 0, 0.80)',
     loginPadding:              Unit.multiply (spacing.containerMargin, 2),
     loginRadius:               Unit.multiply (spacing.containerMargin, 0.5),
+    loginHeaderGlyphSize:      '600%',
+    loginFooterTextSize:       '80%',
   };
 }
