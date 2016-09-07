@@ -133,5 +133,7 @@ export default function (colors) {
 
     floatingBackground:                 colors.light,
     floatingSecondary:                  emphasize (colors.light, 0.3),
+
+    boxBackground:                      colors.light,
   };
 }
