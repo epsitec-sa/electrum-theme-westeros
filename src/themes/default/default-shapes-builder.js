@@ -109,5 +109,7 @@ export default function (spacing) { /*jshint unused:false */
     floatingRadius:            Unit.multiply (spacing.containerMargin, 0.5),
     floatingHeaderGlyphSize:   '600%',
     floatingFooterTextSize:    '80%',
+
+    boxRadius:                 '2px',
   };
 }
