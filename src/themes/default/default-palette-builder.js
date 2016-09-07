@@ -135,6 +135,6 @@ export default function (colors) {
     floatingSecondary:                  emphasize (colors.light, 0.3),
 
     boxBackground:                      colors.light,
-    boxActiveBackground:                lighten (colors.base, 0.7),
+    boxActiveBackground:                emphasize (colors.base, 0.7),
   };
 }
