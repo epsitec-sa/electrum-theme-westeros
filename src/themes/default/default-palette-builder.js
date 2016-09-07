@@ -131,7 +131,7 @@ export default function (colors) {
 
     dialogBackground:                   colors.light,
 
-    loginBackground:                    colors.light,
-    loginSecondary:                     emphasize (colors.light, 0.3),
+    floatingBackground:                 colors.light,
+    floatingSecondary:                  emphasize (colors.light, 0.3),
   };
 }
