@@ -64,7 +64,7 @@ export default function (colors) {
     footerTextBackground:               lighten (colors.dark, 0.1),
     footerText:                         emphasize (colors.dark, 0.5),
 
-    viewBackground:                     darken (colors.light, 0.05),
+    viewBackground:                     emphasize (colors.light, 0.05),
 
     paneNavigatorBackground:            darken (colors.light, 0.05),
     paneNavigatorInactiveText:          emphasize (colors.light, 0.4),
