@@ -66,7 +66,7 @@ export default function (colors) {
 
     viewBackground:                     emphasize (colors.light, 0.05),
 
-    paneNavigatorBackground:            darken (colors.light, 0.05),
+    paneNavigatorBackground:            emphasize (colors.light, 0.05),
     paneNavigatorInactiveText:          emphasize (colors.light, 0.4),
     paneNavigatorInactiveBorder:        emphasize (colors.light, 0.2),
     paneNavigatorActiveBorder:          emphasize (colors.light, 0.8),
@@ -131,7 +131,7 @@ export default function (colors) {
 
     dialogBackground:                   colors.light,
 
-    floatingBackground:                 colors.light,
+    floatingBackground:                 emphasize (colors.light, 0.05),
     floatingSecondary:                  emphasize (colors.light, 0.3),
 
     boxBackground:                      colors.light,
