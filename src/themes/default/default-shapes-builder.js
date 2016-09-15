@@ -89,7 +89,7 @@ export default function (spacing) { /*jshint unused:false */
 
     ticketVerticalSpacing:     '2px',
     ticketHorizontalPadding:   spacing.lineSpacing,
-    ticketVerticalPadding:     Unit.multiply (spacing.lineSpacing, 2.0),
+    ticketVerticalPadding:     spacing.lineSpacing,
     ticketCornerRadius:        '10px',
     ticketLineRadius:          '3px',
     ticketShadowShift:         '2px',
