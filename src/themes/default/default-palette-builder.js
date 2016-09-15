@@ -113,6 +113,7 @@ export default function (colors) {
     calendarHiddenText:                 emphasize (colors.dark, 0.7),
     calendarHeaderText:                 colors.dark,
 
+    markBase:                           colors.base,
     markPrimary:                        colors.alert,
     markSecondary:                      colors.warning,
 
