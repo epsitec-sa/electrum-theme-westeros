@@ -107,6 +107,7 @@ export default function (spacing) { /*jshint unused:false */
     floatingShadow:            '0px 10px 100px rgba(0, 0, 0, 0.50)',
     floatingPadding:           Unit.multiply (spacing.containerMargin, 2),
     floatingRadius:            '3px',
+    floatingHeaderGlyphHeight: '100px',
     floatingHeaderGlyphSize:   '600%',
     floatingFooterTextSize:    '80%',
 
