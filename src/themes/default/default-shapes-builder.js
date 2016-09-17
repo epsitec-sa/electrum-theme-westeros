@@ -104,9 +104,9 @@ export default function (spacing) { /*jshint unused:false */
     dialogPadding:             Unit.multiply (spacing.containerMargin, 2.0),
     dialogShadow:              '0px 20px 100px rgba(0, 0, 0, 0.8)',
 
-    floatingShadow:            '0px 10px 100px rgba(0, 0, 0, 0.80)',
+    floatingShadow:            '0px 10px 100px rgba(0, 0, 0, 0.50)',
     floatingPadding:           Unit.multiply (spacing.containerMargin, 2),
-    floatingRadius:            Unit.multiply (spacing.containerMargin, 0.5),
+    floatingRadius:            '3px',
     floatingHeaderGlyphSize:   '600%',
     floatingFooterTextSize:    '80%',
 
