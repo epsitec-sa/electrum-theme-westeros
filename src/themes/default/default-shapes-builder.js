@@ -93,6 +93,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketCornerRadius:        '10px',
     ticketLineRadius:          '3px',
     ticketShadowShift:         '2px',
+    ticketGlueShadow:          '0px 0px 20px rgba(0, 0, 0, 0.16)',
 
     identityHeight:            '50px',
     identityGlyphSize:         '200%',
