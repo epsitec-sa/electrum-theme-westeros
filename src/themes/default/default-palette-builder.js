@@ -134,7 +134,7 @@ export default function (colors) {
     ticketRedBackground:                '#ff8181',
     ticketGreenBackground:              '#86ff8b',
 
-    thinBorder:                         emphasize (colors.light, 0.4),
+    thinBorder:                         emphasize (colors.light, 0.25),
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
