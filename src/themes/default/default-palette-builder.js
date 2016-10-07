@@ -84,7 +84,7 @@ export default function (colors) {
     text:                               lighten (colors.dark, 0.2),
     infoBackground:                     darken (colors.light, 0.2),
     buttonBackground:                   lighten (colors.light, 0.5),
-    buttonBorder:                       lighten (colors.dark, 0.5),
+    buttonBorder:                       lighten (colors.dark, 0.8),
     labelButtonBackground:              darken (colors.light, 0.05),
     textFieldBackground:                '#fff',  // default value for input background
 
@@ -134,7 +134,7 @@ export default function (colors) {
     ticketRedBackground:                '#ff8181',
     ticketGreenBackground:              '#86ff8b',
 
-    thinBorder:                         emphasize (colors.light, 0.25),
+    thinBorder:                         lighten (colors.dark, 0.8),
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
