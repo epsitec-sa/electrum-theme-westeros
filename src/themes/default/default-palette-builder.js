@@ -147,5 +147,9 @@ export default function (colors) {
 
     boxBackground:                      colors.light,
     boxActiveBackground:                emphasize (colors.base, 0.7),
+
+    notificationBorder:                 colors.dark,
+    notificationText:                   emphasize (colors.dark, 0.5),
+    notificationBackground:             lighten (colors.dark, 0.1),
   };
 }
