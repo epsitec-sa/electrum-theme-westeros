@@ -74,8 +74,8 @@ export default function (colors) {
     paneNavigatorBorderHover:           colors.base,
     paneHeaderBackground:               lighten (colors.dark, 0.5),
     paneHeaderText:                     colors.light,
-    paneSelectedBackground:             lighten (colors.base, 0.5),
-    paneSelectedText:                   colors.light,
+    paneSelectedBackground:             emphasize (colors.light, 0.05),
+    paneSelectedText:                   lighten (colors.dark, 0.2),
 
     vnavigatorButtonBackground:         darken (colors.base, 0.4),
     vnavigatorButtonInactiveBackground: colors.base,
