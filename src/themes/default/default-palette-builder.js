@@ -44,6 +44,8 @@ export default function (colors) {
     viewTabButtonInactiveBackground:    lighten (colors.dark, 0.3),
     viewTabButtonActiveBackground:      darken (colors.light, 0.05),
     viewTabGlyph:                       emphasize (colors.dark, 0.5),
+    viewTabRightText:                   emphasize (colors.dark, 0.5),
+    viewTabRightTextBackground:         lighten (colors.dark, 0.1),
 
     actionBackground:                   colors.light,
     actionBorder:                       emphasize (colors.light, 0.2),
