@@ -12,7 +12,8 @@ function GetMarkColor (theme, value) {
     const fix = {
       base:      theme.palette.markBase,
       primary:   theme.palette.markPrimary,
-      secondary: theme.palette.markSecondary
+      secondary: theme.palette.markSecondary,
+      success:   theme.palette.markSuccess
     };
     return fix[value];
   }
