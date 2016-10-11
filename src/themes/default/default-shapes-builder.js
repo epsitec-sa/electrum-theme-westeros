@@ -116,5 +116,8 @@ export default function (spacing) { /*jshint unused:false */
     floatingFooterTextSize:    '80%',
 
     boxRadius:                 '2px',
+
+    notificationButtonTextSize:  '100%',
+    notificationButtonGlyphSize: '200%',
   };
 }
