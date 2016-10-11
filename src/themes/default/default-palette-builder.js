@@ -152,5 +152,6 @@ export default function (colors) {
     notificationText:                   emphasize (colors.dark, 0.5),
     notificationMessage:                emphasize (colors.dark, 0.8),
     notificationBackground:             lighten (colors.dark, 0.1),
+    notificationBackgroundNotRead:      lighten (colors.dark, 0.3),
   };
 }
