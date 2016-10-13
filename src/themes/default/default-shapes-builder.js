@@ -118,7 +118,7 @@ export default function (spacing) { /*jshint unused:false */
     boxRadius:                   '2px',
 
     notificationButtonTextSize:  '100%',
-    notificationButtonGlyphSize: '200%',
+    notificationButtonGlyphSize: '170%',
     notificationMarkWidth:       Unit.multiply (spacing.containerMargin, 0.3),
   };
 }
