@@ -148,12 +148,12 @@ export default function (colors) {
     boxBackground:                      colors.light,
     boxActiveBackground:                emphasize (colors.base, 0.7),
 
-    notificationBorder:                 colors.dark,
+    notificationBackground:             colors.dark,
     notificationText:                   emphasize (colors.dark, 0.5),
     notificationTextHover:              emphasize (colors.dark, 0.8),
     notificationMessage:                emphasize (colors.dark, 0.8),
     notificationBackgroundHeader:       emphasize (colors.dark, 0.1),
     notificationBackgroundNotRead:      emphasize (colors.dark, 0.1),
-    notificationBackgroundRead:         emphasize (colors.dark, 0.2),
+    notificationBackgroundRead:         emphasize (colors.dark, 0.1),
   };
 }
