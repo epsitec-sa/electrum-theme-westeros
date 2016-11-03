@@ -155,5 +155,8 @@ export default function (colors) {
     notificationBackgroundHeader:       emphasize (colors.dark, 0.1),
     notificationBackgroundNotRead:      emphasize (colors.dark, 0.1),
     notificationBackgroundRead:         emphasize (colors.dark, 0.1),
+
+    splitterBackground:                 darken (colors.base, 0.4),
+    splitterBackgroundHover:            darken (colors.base, 0.1),
   };
 }
