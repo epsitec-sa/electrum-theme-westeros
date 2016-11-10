@@ -94,6 +94,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketLineRadius:            '3px',
     ticketShadowShift:           '2px',
     ticketGlueShadow:            '0px 0px 20px rgba(0, 0, 0, 0.16)',
+    ticketGlueTitleSize:         '130%',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
