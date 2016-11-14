@@ -119,6 +119,8 @@ export default function (colors) {
     markPrimary:                        colors.alert,
     markSecondary:                      colors.warning,
     markSuccess:                        colors.success,
+    markPick:                           '#fbaf3b',
+    markDrop:                           '#00963c',
 
     menuBackground:                     colors.dark,
     menuItemBackground:                 lighten (colors.dark, 0.1),
