@@ -97,6 +97,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketGlueTitleSize:         '130%',
     ticketHoverThickness:        '5px',
     ticketExtendedTextSize:      '90%',
+    ticketHatchSize:             '10px',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
