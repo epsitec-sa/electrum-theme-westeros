@@ -141,6 +141,7 @@ export default function (colors) {
     ticketRedBackground:                '#ff8181',
     ticketGreenBackground:              '#86ff8b',
     ticketGlueTitle:                    emphasize (colors.dark, 1.0),
+    ticketHatchOpacity:                 0.2,
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
