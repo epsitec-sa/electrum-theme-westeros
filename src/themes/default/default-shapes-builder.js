@@ -98,6 +98,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketHoverThickness:        '5px',
     ticketExtendedTextSize:      '90%',
     ticketHatchSize:             '10px',
+    ticketDimmedSize:            '75%',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
