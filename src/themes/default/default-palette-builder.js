@@ -142,6 +142,7 @@ export default function (colors) {
     ticketGlueTitle:                    emphasize (colors.dark, 1.0),
     ticketHatchOpacity:                 0.1,
     ticketDimmed:                       emphasize (colors.light, 0.3),
+    ticketWarningBackground:            colors.warning,
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
