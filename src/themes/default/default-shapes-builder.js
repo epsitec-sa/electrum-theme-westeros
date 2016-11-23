@@ -99,6 +99,10 @@ export default function (spacing) { /*jshint unused:false */
     ticketExtendedTextSize:      '90%',
     ticketHatchSize:             '10px',
     ticketDimmedSize:            '75%',
+    messengerHeight:             '70px',
+    tripBoxHeight:               '70px',
+    tripTicketWidth:             '250px',
+    tripTicketsHeight:           '116px',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
