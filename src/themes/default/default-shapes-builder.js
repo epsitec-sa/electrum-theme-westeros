@@ -103,6 +103,7 @@ export default function (spacing) { /*jshint unused:false */
     tripBoxHeight:               '70px',
     tripTicketWidth:             '250px',
     tripTicketsHeight:           '116px',
+    ticketRectRadius:            '5px',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
