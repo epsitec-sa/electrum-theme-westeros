@@ -133,6 +133,7 @@ export default function (colors) {
     ticketBackground:                   colors.light,
     ticketShadow:                       emphasize (colors.light, 0.2),
     ticketHover:                        colors.base,
+    ticketTransitHover:                 emphasize (colors.base, 0.5),
     ticketGlueBackground:               'rgba(0, 0, 0, 0.08)',
     ticketSelectedBackground:           lighten (colors.base, 0.5),
     ticketBlueBackground:               '#81b2fb',
