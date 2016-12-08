@@ -132,5 +132,7 @@ export default function (spacing) { /*jshint unused:false */
     notificationMarkWidth:       Unit.multiply (spacing.containerMargin, 0.3),
 
     splitterSize:                spacing.lineSpacing,
+
+    dragAndDropThickness:        10,
   };
 }
