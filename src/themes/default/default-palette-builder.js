@@ -132,7 +132,7 @@ export default function (colors) {
     ticketsBackground:                  emphasize (colors.light, 0.05),
     ticketBackground:                   colors.light,
     ticketShadow:                       emphasize (colors.light, 0.2),
-    ticketDargAndDropShadow:            emphasize (colors.light, 0.1),
+    ticketDragAndDropShadow:            emphasize (colors.light, 0.1),
     ticketHover:                        colors.base,
     ticketTransitHover:                 emphasize (colors.base, 0.5),
     ticketGlueBackground:               'rgba(0, 0, 0, 0.08)',
@@ -170,5 +170,7 @@ export default function (colors) {
     splitterBackgroundHover:            darken (colors.base, 0.1),
 
     dragAndDropDestination:             colors.base,
+    roadbookBackground:                 emphasize (colors.light, 0.05),
+    roadbookDragAndDropBackground:      emphasize (colors.light, 0.2),
   };
 }
