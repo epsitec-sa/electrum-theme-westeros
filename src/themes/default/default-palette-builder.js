@@ -145,6 +145,7 @@ export default function (colors) {
     ticketHatchOpacity:                 0.1,
     ticketDimmed:                       emphasize (colors.light, 0.3),
     ticketWarningBackground:            lighten (colors.warning, 0.3),
+    ticketFlashBackground:              lighten (colors.base, 0.85),
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
