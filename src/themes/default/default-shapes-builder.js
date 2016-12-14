@@ -134,6 +134,6 @@ export default function (spacing) { /*jshint unused:false */
 
     splitterSize:                spacing.lineSpacing,
 
-    dragAndDropThickness:        10,
+    dragAndDropThickness:        '10px',
   };
 }

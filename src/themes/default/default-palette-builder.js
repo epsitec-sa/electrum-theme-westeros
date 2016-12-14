@@ -169,8 +169,9 @@ export default function (colors) {
     splitterBackground:                 darken (colors.base, 0.4),
     splitterBackgroundHover:            darken (colors.base, 0.1),
 
-    dragAndDropDestination:             colors.base,
+    dragAndDropHover:                   colors.base,
     roadbookBackground:                 emphasize (colors.light, 0.05),
     roadbookDragAndDropBackground:      emphasize (colors.light, 0.2),
+    roadbookDragAndDropHover:           lighten (colors.base, 0.5),
   };
 }
