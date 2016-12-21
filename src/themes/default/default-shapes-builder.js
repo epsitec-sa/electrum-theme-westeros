@@ -105,6 +105,7 @@ export default function (spacing) { /*jshint unused:false */
     tripTicketWidth:             '250px',
     tripTicketsHeight:           '116px',
     ticketRectRadius:            '3px',
+    ticketHudShadow:             '0px 0px 15px rgba(0, 0, 0, 0.50)',
 
     thinRadius:                  '3px',
     thinLeftMargin:              Unit.multiply (spacing.containerMargin, 0.25),
