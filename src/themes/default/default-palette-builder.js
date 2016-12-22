@@ -123,8 +123,8 @@ export default function (colors) {
     markDrop:                           '#00963c',
 
     menuBackground:                     colors.dark,
-    menuItemBackground:                 lighten (colors.dark, 0.1),
-    menuItemText:                       emphasize (colors.dark, 0.5),
+    menuItemInactiveBackground:         lighten (colors.dark, 0.1),
+    menuItemActiveBackground:           lighten (colors.dark, 0.4),
 
     flyingBalloonBackground:            colors.dark,
     flyingBalloonText:                  colors.light,
