@@ -80,7 +80,7 @@ export default function (spacing) { /*jshint unused:false */
 
     markWidth:                     Unit.multiply (spacing.containerMargin, 0.3),
 
-    menuButtonHeight:              Unit.multiply (spacing.lineHeight, 2.0),
+    menuButtonHeight:              Unit.multiply (spacing.lineHeight, 1.5),
     menuTextSize:                  '80%',
 
     flyingBalloonTriangleSize:     Unit.multiply (spacing.lineHeight, 0.3),
