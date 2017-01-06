@@ -146,6 +146,7 @@ export default function (colors) {
     ticketDimmed:                       emphasize (colors.light, 0.3),
     ticketWarningBackground:            lighten (colors.warning, 0.3),
     ticketFlashBackground:              lighten (colors.base, 0.85),
+    ticketDeliveredBackground:          lighten (colors.success, 0.8),
     ticketHudContent:                   colors.light,
     ticketHudBackground:                colors.base,
     ticketHudShadow:                    'rgba(0, 0, 0, 0.2)',
