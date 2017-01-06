@@ -103,6 +103,7 @@ export default function (spacing) { /*jshint unused:false */
     tripBoxHeight:                 '70px',
     tripBoxBottomMargin:           '10px',
     tripTicketWidth:               '250px',
+    tripTicketCompactedWidth:      '40px',
     tripTicketsHeight:             '116px',
     ticketRectRadius:              '3px',
     ticketHudShadow:               '0px 0px 15px rgba(0, 0, 0, 0.50)',
