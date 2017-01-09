@@ -85,7 +85,9 @@ export default function (spacing) { /*jshint unused:false */
 
     flyingBalloonTriangleSize:     Unit.multiply (spacing.lineHeight, 0.3),
     flyingBalloonTextSize:         '80%',
-    flyingBalloonPadding:          spacing.lineSpacing,
+    flyingBalloonTriangle:         Unit.multiply (spacing.lineSpacing, 1.0),
+    flyingBalloonPadding:          Unit.multiply (spacing.lineSpacing, 0.5),
+    flyingBalloonRadius:           Unit.multiply (spacing.lineSpacing, 0.3),
 
     ticketVerticalSpacing:         '2px',
     ticketHorizontalPadding:       spacing.lineSpacing,
