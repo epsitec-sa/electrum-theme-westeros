@@ -123,7 +123,7 @@ export default function (colors) {
     markDrop:                           '#00963c',
 
     menuBackground:                     colors.dark,
-    menuText:                           lighten (colors.dark, 0.7),
+    menuText:                           lighten (colors.dark, 0.8),
     menuItemInactiveBackground:         lighten (colors.dark, 0.2),
     menuItemActiveBackground:           lighten (colors.dark, 0.4),
 
