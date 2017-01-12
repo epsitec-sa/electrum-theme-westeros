@@ -124,8 +124,10 @@ export default function (colors) {
 
     menuBackground:                     colors.dark,
     menuText:                           lighten (colors.dark, 0.8),
+    menuFocusText:                      lighten (colors.base, 0.4),
     menuItemInactiveBackground:         lighten (colors.dark, 0.2),
     menuItemActiveBackground:           lighten (colors.dark, 0.4),
+    menuItemFocusBackground:            colors.dark,
 
     flyingBalloonBackground:            colors.dark,
     flyingBalloonText:                  colors.light,
