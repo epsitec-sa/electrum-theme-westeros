@@ -110,6 +110,9 @@ export default function (spacing) { /*jshint unused:false */
     ticketRectRadius:              '3px',
     ticketHudShadow:               '0px 0px 15px rgba(0, 0, 0, 0.50)',
     ticketCoverTopMargin:          '20px',
+    ticketBackgroundRightMargin:   '10px',
+    ticketBackgroundFontWeight:    'bold',
+    ticketBackgroundFontSize:      '330%',
 
     thinRadius:                    '3px',
     thinLeftMargin:                Unit.multiply (spacing.containerMargin, 0.25),
