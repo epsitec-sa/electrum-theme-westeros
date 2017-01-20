@@ -2,9 +2,9 @@
 
 export default {
   // Couleurs pastels inversées :
-  base:    '#feebff',
-  light:   '#39173b',
-  dark:    '#ffffff',
+  base:    '#d497d7',
+  light:   '#ffffff',
+  dark:    '#39173b',
   success: '#74dd2c',
   alert:   '#8700ff',
   warning: '#6adfe3'
