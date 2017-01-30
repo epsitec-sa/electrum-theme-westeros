@@ -90,6 +90,8 @@ export default function (spacing) { /*jshint unused:false */
     flyingBalloonRadius:           Unit.multiply (spacing.lineSpacing, 0.3),
 
     ticketVerticalSpacing:         '2px',
+    ticketVerticalSpacingFirst:    '1px',
+    tripBoxVerticalSpacing:        '10px',
     ticketHorizontalPadding:       spacing.lineSpacing,
     ticketVerticalPadding:         spacing.lineSpacing,
     ticketCornerRadius:            '10px',
@@ -103,7 +105,6 @@ export default function (spacing) { /*jshint unused:false */
     ticketDimmedSize:              '75%',
     messengerHeight:               '70px',
     tripBoxHeight:                 '70px',
-    tripBoxBottomMargin:           '10px',
     tripTicketWidth:               '250px',
     tripTicketCompactedWidth:      '40px',
     tripTicketsHeight:             '116px',
