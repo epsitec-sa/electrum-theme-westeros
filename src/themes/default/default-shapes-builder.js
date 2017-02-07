@@ -78,6 +78,11 @@ export default function (spacing) { /*jshint unused:false */
     calendarGlyphSize:             '110%',
     calendarShadow:                '0px 0px 10px rgba(0, 0, 0, 0.50)',
 
+    eventMargin:                   Unit.multiply (spacing.lineSpacing, 1.0),
+    eventButtonHeight:             Unit.multiply (spacing.lineHeight, 1.2),
+    eventSeparator:                '2px',
+    eventPadding:                  spacing.lineSpacing,
+
     markWidth:                     Unit.multiply (spacing.containerMargin, 0.3),
 
     menuButtonHeight:              Unit.multiply (spacing.lineHeight, 1.5),
