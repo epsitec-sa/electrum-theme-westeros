@@ -117,6 +117,8 @@ export default function (colors) {
     calendarHeaderText:                 colors.dark,
 
     eventBackground:                    darken (colors.light, 0.05),
+    eventDowsBackground:                darken (colors.light, 0.15),
+    eventOddBackground:                 darken (colors.light, 0.03),
     eventColumnBackground:              colors.light,
     eventHeaderText:                    colors.dark,
 

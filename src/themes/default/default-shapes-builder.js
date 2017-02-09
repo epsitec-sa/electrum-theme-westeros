@@ -79,8 +79,7 @@ export default function (spacing) { /*jshint unused:false */
     calendarShadow:                '0px 0px 10px rgba(0, 0, 0, 0.50)',
 
     eventMargin:                   Unit.multiply (spacing.lineSpacing, 1.0),
-    eventButtonHeight:             Unit.multiply (spacing.lineHeight, 1.2),
-    eventSeparator:                '2px',
+    eventSeparator:                '4px',
     eventPadding:                  spacing.lineSpacing,
 
     markWidth:                     Unit.multiply (spacing.containerMargin, 0.3),
@@ -113,7 +112,7 @@ export default function (spacing) { /*jshint unused:false */
     tripTicketWidth:               '250px',
     tripTicketCompactedWidth:      '40px',
     tripTicketsHeight:             '116px',
-    ticketRectRadius:              '3px',
+    ticketRectRadius:              '2px',
     ticketHudShadow:               '0px 0px 15px rgba(0, 0, 0, 0.50)',
     ticketCoverTopMargin:          '20px',
     ticketBackgroundRightMargin:   '10px',
