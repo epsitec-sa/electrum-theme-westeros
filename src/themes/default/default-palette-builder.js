@@ -121,6 +121,7 @@ export default function (colors) {
     eventOddBackground:                 darken (colors.light, 0.03),
     eventColumnBackground:              colors.light,
     eventHeaderText:                    colors.dark,
+    eventBorder:                        lighten (colors.dark, 0.8),
 
     markBase:                           colors.base,
     markPrimary:                        colors.alert,
