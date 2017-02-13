@@ -118,10 +118,12 @@ export default function (colors) {
 
     eventBackground:                    darken (colors.light, 0.05),
     eventDowsBackground:                darken (colors.light, 0.15),
-    eventOddBackground:                 darken (colors.light, 0.03),
+    eventOddBackground:                 darken (colors.light, 0.02),
     eventColumnBackground:              colors.light,
     eventHeaderText:                    colors.dark,
     eventBorder:                        lighten (colors.dark, 0.8),
+    chronoDayBackground:                darken (colors.light, 0.2),
+    chronoEventBackground:              colors.base,
 
     markBase:                           colors.base,
     markPrimary:                        colors.alert,
