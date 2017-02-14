@@ -124,6 +124,8 @@ export default function (colors) {
     eventBorder:                        lighten (colors.dark, 0.8),
     chronoDayBackground:                darken (colors.light, 0.2),
     chronoEventBackground:              colors.base,
+    chronoLineSeparator:                darken (colors.light, 0.2),
+    chronoHover:                        fade (colors.base, 0.1),
 
     markBase:                           colors.base,
     markPrimary:                        colors.alert,

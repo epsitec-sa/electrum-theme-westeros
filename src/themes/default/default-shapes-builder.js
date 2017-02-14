@@ -81,6 +81,8 @@ export default function (spacing) { /*jshint unused:false */
     eventMargin:                   Unit.multiply (spacing.lineSpacing, 1.0),
     eventSeparator:                '4px',
     eventPadding:                  spacing.lineSpacing,
+    chronosTopHeight:              '48px',
+    chronosLineHeight:             '32px',
 
     markWidth:                     Unit.multiply (spacing.containerMargin, 0.3),
 
