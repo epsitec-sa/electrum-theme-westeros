@@ -83,7 +83,7 @@ export default function (spacing) { /*jshint unused:false */
     eventPadding:                  spacing.lineSpacing,
     chronosTopHeight:              '48px',
     chronosLineHeight:             '32px',
-    chronosSeparatorHeight:        '0px',
+    chronosSeparatorHeight:        '16px',
     chronosNavigatorMargin:        spacing.lineSpacing,
 
     markWidth:                     Unit.multiply (spacing.containerMargin, 0.3),

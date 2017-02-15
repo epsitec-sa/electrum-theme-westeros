@@ -123,10 +123,10 @@ export default function (colors) {
     eventColumnBackground:              colors.light,
     eventHeaderText:                    colors.dark,
     eventBorder:                        lighten (colors.dark, 0.8),
-    chronoDayBackground:                lighten (colors.base, 0.85),
+    chronoDayBackground:                darken (colors.light, 0.15),
     chronoEventBackground:              colors.base,
-    chronoLineSeparator:                darken (colors.light, 0.3),
-    chronoHover:                        fade (colors.base, 0.2),
+    chronoLineSeparator:                darken (colors.light, 0.15),
+    chronoHover:                        fade (colors.base, 0.1),
     chronoNavigatorBackground:          darken (colors.base, 0.4),
     chronoNavigatorText:                darken (colors.light, 0.3),
 
