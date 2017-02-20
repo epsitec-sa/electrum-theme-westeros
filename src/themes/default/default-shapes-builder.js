@@ -84,7 +84,7 @@ export default function (spacing) { /*jshint unused:false */
     chronosTopHeight:              '48px',
     chronosLineHeight:             '32px',
     chronosSeparatorHeight:        '16px',
-    chronosBarRadius:              '8px',
+    chronosBarRadius:              '6px',
     chronosNavigatorMargin:        spacing.lineSpacing,
     chronosLabelWidth:             '300px',
     chronosLabelMargin:            Unit.multiply (spacing.lineSpacing, 2.0),

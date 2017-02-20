@@ -132,6 +132,7 @@ export default function (colors) {
     chronoNavigatorBackground:          darken (colors.base, 0.4),
     chronoNavigatorText:                darken (colors.light, 0.3),
     chronoBadge:                        colors.base,
+    chronoLabelSeparator:               colors.base,
 
     markBase:                           colors.base,
     markPrimary:                        colors.alert,
