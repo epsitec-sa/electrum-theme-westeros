@@ -104,6 +104,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketVerticalSpacing:         '2px',
     ticketVerticalSpacingFirst:    '1px',
     tripBoxVerticalSpacing:        '10px',
+    ticketBacklogSpacing:          '10px',
     ticketHorizontalPadding:       spacing.lineSpacing,
     ticketVerticalPadding:         spacing.lineSpacing,
     ticketCornerRadius:            '10px',
