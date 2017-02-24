@@ -142,6 +142,7 @@ export default function (colors) {
     markSuccess:                        colors.success,
     markPick:                           '#fbaf3b',
     markDrop:                           '#00963c',
+    markTask:                           lighten (colors.base, 0.2),
 
     menuBackground:                     colors.dark,
     menuText:                           lighten (colors.dark, 0.8),

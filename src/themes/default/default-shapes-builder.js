@@ -117,7 +117,7 @@ export default function (spacing) { /*jshint unused:false */
     ticketHatchSize:               '10px',
     ticketDimmedSize:              '75%',
     messengerHeight:               '70px',
-    tripBoxHeight:                 '70px',
+    tripBoxHeight:                 '35px',
     tripTicketWidth:               '250px',
     tripTicketCompactedWidth:      '40px',
     tripTicketsHeight:             '116px',

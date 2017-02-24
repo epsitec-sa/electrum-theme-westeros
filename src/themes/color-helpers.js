@@ -21,6 +21,7 @@ function GetMarkColor (theme, value) {
       success:   theme.palette.markSuccess,
       pick:      theme.palette.markPick,
       drop:      theme.palette.markDrop,
+      task:      theme.palette.markTask,
     };
     return fix[value];
   }
