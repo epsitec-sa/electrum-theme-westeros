@@ -1,6 +1,6 @@
 {
   "name": "electrum-theme",
-  "version": "4.4.2",
+  "version": "4.5.0",
   "description": "Electrum Theme provides basic theming support for use with electrum-arc.",
   "main": "lib/index.js",
   "scripts": {

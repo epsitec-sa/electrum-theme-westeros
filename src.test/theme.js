@@ -1,4 +1,4 @@
-'use strict';
+/* global describe it */
 
 import {expect} from 'mai-chai';
 import {Theme} from 'electrum-theme';
@@ -18,10 +18,10 @@ describe ('Theme', () => {
     });
 
     it ('creates a Theme with initialized properties', () => {
-      const theme = Theme.create ('default');
-      expect (theme).to.have.property ('name', 'default');
-      expect (theme.colors).to.have.property ('red50');
-      expect (theme.palette).to.have.property ('primary1Color', '#03a9f4');
+      const theme = Theme.create ('Default');
+      expect (theme).to.have.property ('name', 'Default');
+      expect (theme.colors).to.have.property ('base');
+      expect (theme.palette).to.have.property ('taskBackground', '#336799');
       expect (theme.shapes).to.have.property ('defaultBorderRadius');
       expect (theme.spacing).to.have.property ('iconSize');
       expect (theme.styles).to.have.property ('reset');
@@ -30,11 +30,11 @@ describe ('Theme', () => {
       expect (theme.typo).to.have.property ('font');
     });
 
-    it ('can be used with dark theme too', () => {
-      const theme = Theme.create ('dark');
-      expect (theme).to.have.property ('name', 'dark');
-      expect (theme.colors).to.have.property ('red50');
-      expect (theme.palette).to.have.property ('primary1Color', '#212121');
+    it ('can be used with green theme too', () => {
+      const theme = Theme.create ('DefaultGreen');
+      expect (theme).to.have.property ('name', 'DefaultGreen');
+      expect (theme.colors).to.have.property ('base');
+      expect (theme.palette).to.have.property ('taskBackground', '#33997e');
       expect (theme.shapes).to.have.property ('defaultBorderRadius');
       expect (theme.spacing).to.have.property ('iconSize');
       expect (theme.styles).to.have.property ('reset');

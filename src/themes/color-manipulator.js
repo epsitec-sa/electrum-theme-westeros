@@ -147,7 +147,7 @@ function getLuminance (color) {
  * Light colors are darkened, dark colors are lightened.
  *
  * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {number} coefficient=0.15 - multiplier in the range 0 - 1
+ * @param {number} coefficient = 0.15 - multiplier in the range 0 - 1
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function emphasize (color, coefficient = 0.15) {
