@@ -201,5 +201,9 @@ export default function (colors) {
     roadbookBackground:                 emphasize (colors.light, 0.05),
     roadbookDragAndDropBackground:      emphasize (colors.light, 0.2),
     roadbookDragAndDropHover:           colors.base,
+
+    tableBackground:                    darken (colors.light, 0.4),
+    tableHeaderBackground:              darken (colors.light, 0.2),
+    tableCellBackground:                darken (colors.light, 0.1),
   };
 }

@@ -158,5 +158,7 @@ export default function (spacing) { /*jshint unused:false */
 
     dragAndDropRoadbookThickness: '20px',
     dragAndDropTicketThickness:   '10px',
+
+    tablePadding:                 spacing.lineSpacing,
   };
 }
