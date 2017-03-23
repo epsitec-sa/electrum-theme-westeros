@@ -205,5 +205,6 @@ export default function (colors) {
     tableBackground:                    darken (colors.light, 0.4),
     tableHeaderBackground:              darken (colors.light, 0.2),
     tableCellBackground:                darken (colors.light, 0.1),
+    tableHoverBackground:               lighten (colors.base, 0.7),
   };
 }
