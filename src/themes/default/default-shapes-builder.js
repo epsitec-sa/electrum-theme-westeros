@@ -160,5 +160,6 @@ export default function (spacing) { /*jshint unused:false */
     dragAndDropTicketThickness:   '10px',
 
     tablePadding:                 spacing.lineSpacing,
+    tableTextSize:                '90%',
   };
 }
