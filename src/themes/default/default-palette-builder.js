@@ -176,7 +176,6 @@ export default function (colors) {
     ticketBadgeBackground:              darken (colors.light, 0.5),
     ticketNumberBackground:             'rgba(0, 0, 0, 0.1)',
     ticketSubpaneBorder:                darken (colors.light, 0.3),
-    ticketSubpaneHover:                 darken (colors.light, 0.02),
 
     warningBackground:                  colors.warning,
     warningText:                        colors.dark,
