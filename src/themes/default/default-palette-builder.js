@@ -109,7 +109,7 @@ export default function (colors) {
 
     calendarBackground:                 colors.light,
     calendarButtonWeekendBackground:    emphasize (colors.light, 0.05),
-    calendarBorderActiveBackground:     colors.base,
+    calendarBorderActiveBackground:     darken (colors.base, 0.5),
     calendarDefaultRecurrenceBackground: lighten (colors.base, 0.3),
     calendarAddedRecurrenceBackground:  colors.base,
     calendarText:                       colors.dark,
