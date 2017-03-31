@@ -159,7 +159,7 @@ export default function (colors) {
     ticketBackground:                   colors.light,
     ticketShadow:                       emphasize (colors.light, 0.2),
     ticketDragAndDropShadow:            emphasize (colors.light, 0.1),
-    ticketDragAndDropHover:             lighten (colors.base, 0.8),
+    ticketDragAndDropHover:             emphasize (colors.light, 0.1),
     ticketHover:                        colors.base,
     ticketTransitHover:                 emphasize (colors.base, 0.5),
     ticketGlueBackground:               'rgba(0, 0, 0, 0.08)',
