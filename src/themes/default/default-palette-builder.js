@@ -108,13 +108,11 @@ export default function (colors) {
     comboActiveGlyph:                   emphasize (colors.base, 1.0),
 
     calendarBackground:                 colors.light,
-    calendarButtonWeekendBackground:    emphasize (colors.light, 0.05),
-    calendarBorderActiveBackground:     darken (colors.base, 0.5),
-    calendarDefaultRecurrenceBackground: lighten (colors.base, 0.3),
-    calendarAddedRecurrenceBackground:  colors.base,
+    calendarWeekendBackground:          emphasize (colors.light, 0.05),
+    calendarActiveBackground:           colors.base,
     calendarText:                       colors.dark,
     calendarDimmedText:                 lighten (colors.dark, 0.7),
-    calendarRecurrenceText:             colors.light,
+    calendarActiveText:                 colors.light,
     calendarHeaderText:                 colors.dark,
 
     eventBoxBackground:                 darken (colors.light, 0.15),
