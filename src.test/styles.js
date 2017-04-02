@@ -5,9 +5,11 @@ import {Styles, Theme} from 'electrum-theme';
 
 const theme = Theme.create ('default');
 
-const def1 = (theme) => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
-const def2 = (theme, props) => ({base: {size: props.size || 10}, small: {size: 5}});
+const def1 = (_) => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
+const def2 = (_, props) => ({base: {size: props.size || 10}, small: {size: 5}});
 const def3 = () => ({a: {x: 10, n: 'a'}, b: {y: 20, n: 'b'}, c: {x: 11, y: 22}});
+
+/******************************************************************************/
 
 describe ('Style', () => {
   describe ('create()', () => {
@@ -84,7 +86,7 @@ describe ('Style', () => {
     });
 
     it ('applies functions', () => {
-      const def = (theme) => ({
+      const def = (_) => ({
         a: {x: 10, n: 'a'},
         b: {y: s => s.x * 2, n: 'b'}
       });
@@ -93,7 +95,7 @@ describe ('Style', () => {
     });
 
     it ('merges nested properties', () => {
-      const def = (theme) => ({
+      const def = (_) => ({
         a: {x: 10, y: {f: 'f', g: 'A'}},
         b: {y: s => ({g: 'B', h: 'h', xx: s.x / 2})}
       });
@@ -102,7 +104,7 @@ describe ('Style', () => {
     });
 
     it ('undefines null properties', () => {
-      const def = (theme) => ({
+      const def = (_) => ({
         a: {x: 10, y: 10},
         b: {z: 20, x: null}
       });
@@ -148,17 +150,19 @@ describe ('Style', () => {
     });
 
     it ('resolves includes', () => {
-      const props = {styles: {foo: 'bar', includes: ['resetAlign']}};
+      const props = {styles: {foo: 'bar', includes: [ 'resetAlign' ]}};
       expect (JSON.stringify (customResolve (styles, props))).to.equal (
         '{"size":10,"face":"Lato, sans-serif","foo":"bar","verticalAlign":"baseline"}'
       );
     });
 
     it ('resolves includes, preserves ordering', () => {
-      const props = {styles: {includes: ['resetAlign'], foo: 'bar'}};
+      const props = {styles: {includes: [ 'resetAlign' ], foo: 'bar'}};
       expect (JSON.stringify (customResolve (styles, props))).to.equal (
         '{"size":10,"face":"Lato, sans-serif","verticalAlign":"baseline","foo":"bar"}'
       );
     });
   });
 });
+
+/******************************************************************************/

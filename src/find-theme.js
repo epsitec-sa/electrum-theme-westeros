@@ -1,5 +1,3 @@
-'use strict';
-
 import configurations from './theme-configurations.js';
 
 /******************************************************************************/

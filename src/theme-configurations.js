@@ -1,5 +1,3 @@
-'use strict';
-
 import CompactMono from './theme-configurations/compact-mono.js';
 import CompactPink from './theme-configurations/compact-pink.js';
 import Default from './theme-configurations/default.js';

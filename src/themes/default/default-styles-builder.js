@@ -1,5 +1,3 @@
-'use strict';
-
 /******************************************************************************/
 
 const resetMargin = {
@@ -42,7 +40,7 @@ const fullSize = {
 
 /******************************************************************************/
 
-export default function (config) { /*jshint unused:false*/
+export default function (_) {
   return {
     fullSize,
     reset: Object.assign ({}, resetAlign, resetLayout, resetListStyle),

@@ -1,5 +1,3 @@
-'use strict';
-
 import Colors  from '../themes/colors/pink-colors.js';
 import Spacing from '../themes/default/default-spacing.js';
 import Timing  from '../themes/default/default-timing.js';

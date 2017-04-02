@@ -1,5 +1,3 @@
-'use strict';
-
 /******************************************************************************/
 
 const units = ['px', 'rem', 'em', '%', 'vmax', 'vmin', 'vh', 'vw'];
@@ -83,6 +81,6 @@ function sub (a, b, decimals = null) {
 
 /******************************************************************************/
 
-module.exports = {
+export {
   multiply, add, sub, parse, fix
 };

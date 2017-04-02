@@ -1,5 +1,3 @@
-'use strict';
-
 import ColorManipulator from './themes/color-manipulator.js';
 import ColorHelpers from './themes/color-helpers.js';
 import Unit from './themes/unit.js';

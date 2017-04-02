@@ -5,6 +5,8 @@ import {expect} from 'mai-chai';
 import {resolveIncludes} from '../src/resolve-local-style.js';
 import {mergeStyleProperties} from '../src/resolve-local-style.js';
 
+/******************************************************************************/
+
 describe ('resolve', () => {
   describe ('resolveIncludes()', () => {
     it ('resolves multiple includes', () => {
@@ -21,7 +23,7 @@ describe ('resolve', () => {
     });
 
     it ('accepts missing includes', () => {
-      const style = {x: 10, includes: ['a'], y: 20};
+      const style = {x: 10, includes: [ 'a' ], y: 20};
       const theme = {styles: {}};
       const result = resolveIncludes (style, theme);
       expect (result).to.deep.equal ({x: 10, y: 20});
@@ -35,7 +37,7 @@ describe ('resolve', () => {
     });
 
     it ('resolves include with override, applied in order', () => {
-      const style = {x: 10, includes: ['a'], y: 20};
+      const style = {x: 10, includes: [ 'a' ], y: 20};
       const theme = {
         styles: {
           a: {v: 'A', x: 11, y: 22},
@@ -46,7 +48,7 @@ describe ('resolve', () => {
     });
 
     it ('resolves include with functional override', () => {
-      const style = {x: 10, includes: ['a'], y: 20};
+      const style = {x: 10, includes: [ 'a' ], y: 20};
       const theme = {
         styles: {
           a: {x: s => s.x + 1},
@@ -103,3 +105,5 @@ describe ('resolve', () => {
     });
   });
 });
+
+/******************************************************************************/

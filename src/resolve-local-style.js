@@ -1,5 +1,3 @@
-'use strict';
-
 /******************************************************************************/
 
 function appendIncludes (current, includes) {
@@ -78,12 +76,12 @@ export function resolveLocalStyle (styleMap, localStyle, theme, current = {}) {
   // * localStyle can be one of several:
   //   1. An array of items -- every item will be resolved recursively
   //   2. The name of a sub-style, which will be included
-  //   3. An undefined or null style, which will be ignored 
+  //   3. An undefined or null style, which will be ignored
   //   4. A style object, which will be merged
   // * theme is a reference to the theme engine; it is needed to resolve
   //   includes of globally defined styles
   // * current will accumulate the resolved style properties
-  
+
   // 1. Recursively resolve all local styles:
   if (Array.isArray (localStyle)) {
     localStyle.forEach (x => {
@@ -91,18 +89,18 @@ export function resolveLocalStyle (styleMap, localStyle, theme, current = {}) {
     });
     return current;
   }
-  
+
   // 2. Resolve named local style:
   if (typeof localStyle === 'string') {
     localStyle = styleMap[localStyle];
   }
-  
+
   // 3. Handle unknown/unresolved/null local style:
   if (!localStyle) {
     return current;
   }
-  
-  // 4. Merge local style properties with current style: 
+
+  // 4. Merge local style properties with current style:
   if (typeof localStyle === 'object') {
     const style = resolveIncludes (localStyle, theme);
     mergeStyleProperties (current, style);

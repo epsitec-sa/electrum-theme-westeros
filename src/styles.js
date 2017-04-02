@@ -1,5 +1,3 @@
-'use strict';
-
 import {resolveLocalStyle} from './resolve-local-style.js';
 
 /******************************************************************************/
@@ -41,7 +39,7 @@ export class Styles {
     }
     return this;
   }
-  
+
   get usesProps () {
     return this._defUsesProps;
   }
@@ -53,7 +51,7 @@ export class Styles {
   resolve (...names) {
     return resolveLocalStyle (this.styles, names, this._theme);
   }
-  
+
   merge (current, ...names) {
     return resolveLocalStyle (this.styles, names, this._theme, current);
   }

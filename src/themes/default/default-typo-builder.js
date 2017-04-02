@@ -1,10 +1,8 @@
-'use strict';
-
-export default function (spacing) { /*jshint unused:false*/
+export default function (_) {
   return {
     font: 'Lato, sans-serif',
     /* font geometry settings defined by Daniel Roux */
 
-    fontScale:       1.0,
+    fontScale: 1.0,
   };
 }
