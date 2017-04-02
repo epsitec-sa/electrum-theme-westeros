@@ -1,8 +1,6 @@
-import ColorManipulator from '../color-manipulator.js';
-
 /******************************************************************************/
 
-const {darken, lighten, emphasize} = ColorManipulator;
+import {darken, lighten, emphasize, fade} from '../color-manipulator.js';
 
 /******************************************************************************/
 
@@ -15,11 +13,11 @@ export default function (colors) {
     accent2Color: colors.pinkA400,
     accent3Color: colors.pinkA100,
     textColor: colors.darkBlack,
-    subTextColor: ColorManipulator.fade (colors.darkBlack, 0.54),
+    subTextColor: fade (colors.darkBlack, 0.54),
     canvasColor: colors.white,
     paperColor: colors.white,
     borderColor: colors.grey300,
-    disabledColor: ColorManipulator.fade (colors.darkBlack, 0.3),
+    disabledColor: fade (colors.darkBlack, 0.3),
 
     /* colors settings defined by Daniel Roux */
 

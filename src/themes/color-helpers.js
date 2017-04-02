@@ -27,4 +27,4 @@ function getMarkColor (theme, value) {
 
 /******************************************************************************/
 
-export {getMarkColor};
+export { getMarkColor };

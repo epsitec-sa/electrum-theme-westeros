@@ -1,4 +1,4 @@
-import Unit from '../unit.js';
+import {multiply} from '../unit.js';
 
 /******************************************************************************/
 
@@ -13,45 +13,45 @@ export default function (spacing) {
     lineSpacing: spacing.lineSpacing,
     smoothRadius: spacing.smoothRadius,
 
-    taskButtonWidth: Unit.multiply (spacing.lineHeight, 2.5),
-    taskButtonHeight: Unit.multiply (spacing.lineHeight, 2.5),
+    taskButtonWidth: multiply (spacing.lineHeight, 2.5),
+    taskButtonHeight: multiply (spacing.lineHeight, 2.5),
     taskLogoTextSize: '80%',
     taskLogoGlyphSize: '200%',
     taskTextSize: '80%',
     taskGlyphSize: '125%',
     taskShadow: '0px 0px 60px rgba(0, 0, 0, 0.50)',
-    taskSeparatorHeight: Unit.multiply (spacing.lineHeight, 0.5),
-    taskLabelTopMargin: Unit.multiply (spacing.lineSpacing, 4.0),
-    taskLabelBottomMargin: Unit.multiply (spacing.lineSpacing, 1.0),
+    taskSeparatorHeight: multiply (spacing.lineHeight, 0.5),
+    taskLabelTopMargin: multiply (spacing.lineSpacing, 4.0),
+    taskLabelBottomMargin: multiply (spacing.lineSpacing, 1.0),
 
-    taskTabHeight: Unit.multiply (spacing.lineHeight, 1.5),
+    taskTabHeight: multiply (spacing.lineHeight, 1.5),
     taskTabLeftMargin: spacing.containerMargin,
     taskTabTextSize: '100%',
     taskTabGlyphSize: '100%',
 
-    mainTabHeight: Unit.multiply (spacing.lineHeight, 1.5),
-    mainTabTriangleSize: Unit.multiply (spacing.lineHeight, 0.2),
+    mainTabHeight: multiply (spacing.lineHeight, 1.5),
+    mainTabTriangleSize: multiply (spacing.lineHeight, 0.2),
     mainTabTextSize: '125%',
 
-    viewTabHeight: Unit.multiply (spacing.lineHeight, 1.0),
+    viewTabHeight: multiply (spacing.lineHeight, 1.0),
     viewTabTextSize: '80%',
 
-    viewSpacing: Unit.multiply (spacing.containerMargin, 0.25),
+    viewSpacing: multiply (spacing.containerMargin, 0.25),
 
     paneShadow: '0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23)',
 
-    paneNavigatorHeight: Unit.multiply (spacing.lineHeight, 1.0),
+    paneNavigatorHeight: multiply (spacing.lineHeight, 1.0),
     paneNavigatorTextSize: '100%',
     paneHeaderTextSize: '200%',
 
-    vnavigatorButtonSize: Unit.multiply (spacing.lineHeight, 1.25),
+    vnavigatorButtonSize: multiply (spacing.lineHeight, 1.25),
 
-    footerHeight: Unit.multiply (spacing.lineHeight, 2.0),
+    footerHeight: multiply (spacing.lineHeight, 2.0),
     footerTextSize: '100%',
     footerGlyphSize: '150%',
 
-    actionHeight: Unit.multiply (spacing.lineHeight, 1.5),
-    actionRadius: Unit.multiply (spacing.lineHeight, 0.75),
+    actionHeight: multiply (spacing.lineHeight, 1.5),
+    actionRadius: multiply (spacing.lineHeight, 0.75),
     actionTextSize: '100%',
     actionGlyphSize: '120%',
     actionShadow: '0px 0px 50px rgba(0, 0, 0, 0.20)',
@@ -63,22 +63,22 @@ export default function (spacing) {
     labelTitleTextSize: '125%',
     labelBigTextSize: '160%',
 
-    badgeHeight: Unit.multiply (spacing.lineHeight, 0.5),
-    badgeRadius: Unit.multiply (spacing.lineHeight, 0.1),
+    badgeHeight: multiply (spacing.lineHeight, 0.5),
+    badgeRadius: multiply (spacing.lineHeight, 0.1),
     badgeTextSize: '70%',
 
-    messageMargin: Unit.multiply (spacing.containerMargin, 0.4),
+    messageMargin: multiply (spacing.containerMargin, 0.4),
     messageTextSize: '80%',
 
-    calendarMargin: Unit.multiply (spacing.lineSpacing, 1.0),
-    calendarButtonWidth: Unit.multiply (spacing.lineHeight, 1.2),
-    calendarButtonHeight: Unit.multiply (spacing.lineHeight, 1.0),
+    calendarMargin: multiply (spacing.lineSpacing, 1.0),
+    calendarButtonWidth: multiply (spacing.lineHeight, 1.2),
+    calendarButtonHeight: multiply (spacing.lineHeight, 1.0),
     calendarTextSize: '80%',
     calendarDOWTextSize: '80%',
     calendarGlyphSize: '110%',
     calendarShadow: '0px 0px 10px rgba(0, 0, 0, 0.50)',
 
-    eventMargin: Unit.multiply (spacing.lineSpacing, 1.0),
+    eventMargin: multiply (spacing.lineSpacing, 1.0),
     eventSeparator: '4px',
     eventPadding: spacing.lineSpacing,
     chronosTopHeight: '48px',
@@ -87,19 +87,19 @@ export default function (spacing) {
     chronosBarRadius: '6px',
     chronosNavigatorMargin: spacing.lineSpacing,
     chronosLabelWidth: '300px',
-    chronosLabelMargin: Unit.multiply (spacing.lineSpacing, 2.0),
+    chronosLabelMargin: multiply (spacing.lineSpacing, 2.0),
     chronosSeparatorWidth: '5px',
 
-    markWidth: Unit.multiply (spacing.containerMargin, 0.3),
+    markWidth: multiply (spacing.containerMargin, 0.3),
 
-    menuButtonHeight: Unit.multiply (spacing.lineHeight, 1.5),
+    menuButtonHeight: multiply (spacing.lineHeight, 1.5),
     menuTextSize: '80%',
 
-    flyingBalloonTriangleSize: Unit.multiply (spacing.lineHeight, 0.3),
+    flyingBalloonTriangleSize: multiply (spacing.lineHeight, 0.3),
     flyingBalloonTextSize: '80%',
-    flyingBalloonTriangle: Unit.multiply (spacing.lineSpacing, 1.0),
-    flyingBalloonPadding: Unit.multiply (spacing.lineSpacing, 0.5),
-    flyingBalloonRadius: Unit.multiply (spacing.lineSpacing, 0.3),
+    flyingBalloonTriangle: multiply (spacing.lineSpacing, 1.0),
+    flyingBalloonPadding: multiply (spacing.lineSpacing, 0.5),
+    flyingBalloonRadius: multiply (spacing.lineSpacing, 0.3),
 
     ticketVerticalSpacing: '2px',
     ticketVerticalSpacingFirst: '1px',
@@ -129,7 +129,7 @@ export default function (spacing) {
     ticketBackgroundFontSize: '330%',
 
     thinRadius: '3px',
-    thinLeftMargin: Unit.multiply (spacing.containerMargin, 0.25),
+    thinLeftMargin: multiply (spacing.containerMargin, 0.25),
 
     identityHeight: '50px',
     identityGlyphSize: '200%',
@@ -138,11 +138,11 @@ export default function (spacing) {
     warningTextSize: '100%',
     warningGlyphSize: '100%',
 
-    dialogPadding: Unit.multiply (spacing.containerMargin, 2.0),
+    dialogPadding: multiply (spacing.containerMargin, 2.0),
     dialogShadow: '0px 20px 100px rgba(0, 0, 0, 0.8)',
 
     floatingShadow: '0px 10px 100px rgba(0, 0, 0, 0.50)',
-    floatingPadding: Unit.multiply (spacing.containerMargin, 2),
+    floatingPadding: multiply (spacing.containerMargin, 2),
     floatingRadius: '3px',
     floatingHeaderGlyphHeight: '120px',
     floatingHeaderGlyphSize: '600%',
@@ -152,7 +152,7 @@ export default function (spacing) {
 
     notificationButtonTextSize: '100%',
     notificationButtonGlyphSize: '170%',
-    notificationMarkWidth: Unit.multiply (spacing.containerMargin, 0.3),
+    notificationMarkWidth: multiply (spacing.containerMargin, 0.3),
 
     splitterSize: spacing.lineSpacing,
 
