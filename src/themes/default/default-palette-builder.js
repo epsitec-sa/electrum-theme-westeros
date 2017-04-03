@@ -111,7 +111,7 @@ export default function (colors) {
     calendarWeekendBackground: emphasize (colors.light, 0.05),
     calendarActiveBackground:  colors.base,
     calendarText:              colors.dark,
-    calendarDimmedText:        lighten (colors.dark, 0.7),
+    calendarDimmedText:        lighten (colors.dark, 0.8),
     calendarActiveText:        colors.light,
     calendarHeaderText:        colors.dark,
 
