@@ -13,13 +13,13 @@ function getMarkColor (theme, value) {
     return value;
   } else {
     const fix = {
-      base: theme.palette.markBase,
-      primary: theme.palette.markPrimary,
+      base:      theme.palette.markBase,
+      primary:   theme.palette.markPrimary,
       secondary: theme.palette.markSecondary,
-      success: theme.palette.markSuccess,
-      pick: theme.palette.markPick,
-      drop: theme.palette.markDrop,
-      task: theme.palette.markTask,
+      success:   theme.palette.markSuccess,
+      pick:      theme.palette.markPick,
+      drop:      theme.palette.markDrop,
+      task:      theme.palette.markTask,
     };
     return fix[value];
   }
@@ -27,4 +27,4 @@ function getMarkColor (theme, value) {
 
 /******************************************************************************/
 
-export { getMarkColor };
+export {getMarkColor};

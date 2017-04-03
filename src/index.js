@@ -6,8 +6,8 @@ import {
   getLuminance,
 } from './themes/color-manipulator.js';
 
-import { getMarkColor } from './themes/color-helpers.js';
-import { multiply, add, sub, parse, fix } from './themes/unit.js';
+import {getMarkColor} from './themes/color-helpers.js';
+import {multiply, add, sub, parse, fix} from './themes/unit.js';
 import findTheme from './find-theme.js';
 
 import {
@@ -27,8 +27,8 @@ const ColorManipulator = {
   getLuminance,
 };
 
-const Unit = { multiply, add, sub, parse, fix };
-const ColorHelpers = { getMarkColor };
+const Unit = {multiply, add, sub, parse, fix};
+const ColorHelpers = {getMarkColor};
 
 const ThemeConfigurations = {
   CompactMono, CompactPink,

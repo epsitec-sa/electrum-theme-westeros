@@ -87,14 +87,14 @@ export class Theme {
     });
 
     return new Theme (name, secretKey, {
-      colors: Colors,
-      palette: Palette,
-      shapes: Shapes,
-      spacing: Spacing,
-      styles: Styles,
-      timing: Timing,
+      colors:      Colors,
+      palette:     Palette,
+      shapes:      Shapes,
+      spacing:     Spacing,
+      styles:      Styles,
+      timing:      Timing,
       transitions: Transitions,
-      typo: Typo
+      typo:        Typo
     });
   }
 }

@@ -1,12 +1,12 @@
 export default {
-  iconSize: 24,
+  iconSize:                24,
   desktopKeylineIncrement: 64,
 
   /* geometry settings defined by Daniel Roux */
   // Géométrie compacte:
-  lineHeight: '25px',
+  lineHeight:      '25px',
   containerMargin: '10px',
-  lineSpacing: '5px',
-  smoothRadius: '2px',
+  lineSpacing:     '5px',
+  smoothRadius:    '2px',
 
 };

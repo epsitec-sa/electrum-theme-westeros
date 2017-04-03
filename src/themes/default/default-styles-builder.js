@@ -1,23 +1,23 @@
 /******************************************************************************/
 
 const resetMargin = {
-  marginLeft: 0,
-  marginRight: 0,
-  marginTop: 0,
+  marginLeft:   0,
+  marginRight:  0,
+  marginTop:    0,
   marginBottom: 0
 };
 
 const resetPadding = {
-  paddingLeft: 0,
-  paddingRight: 0,
-  paddingTop: 0,
+  paddingLeft:   0,
+  paddingRight:  0,
+  paddingTop:    0,
   paddingBottom: 0
 };
 
 const resetBorder = {
-  borderLeft: 0,
-  borderRight: 0,
-  borderTop: 0,
+  borderLeft:   0,
+  borderRight:  0,
+  borderTop:    0,
   borderBottom: 0
 };
 
@@ -32,9 +32,9 @@ const resetAlign = {
 const resetLayout = Object.assign ({}, resetBorder, resetMargin, resetPadding);
 
 const fullSize = {
-  top: 0,
-  left: 0,
-  width: '100%',
+  top:    0,
+  left:   0,
+  width:  '100%',
   height: '100%'
 };
 
@@ -43,7 +43,7 @@ const fullSize = {
 export default function (_) {
   return {
     fullSize,
-    reset: Object.assign ({}, resetAlign, resetLayout, resetListStyle),
+    reset:     Object.assign ({}, resetAlign, resetLayout, resetListStyle),
     resetAlign,
     resetBorder,
     resetLayout,

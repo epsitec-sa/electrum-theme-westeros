@@ -2,7 +2,7 @@ export default function (timings) {
   const transitions = {
     defaultTransition: {
       duration: timings.timeBase * 2,
-      enter: {
+      enter:    {
         opacity: [1, 0]
       },
       leave: {
@@ -11,18 +11,18 @@ export default function (timings) {
     },
     rotate: {
       duration: timings.timeBase,
-      enter: {
+      enter:    {
         translateZ: 0, // Force HA by animating a 3D property
-        rotateZ: '360deg'
+        rotateZ:    '360deg'
       },
       leave: {
         translateZ: 0, // Force HA by animating a 3D property
-        rotateZ: '-360deg'
+        rotateZ:    '-360deg'
       }
     },
     slide: {
       duration: timings.timeBase,
-      enter: {
+      enter:    {
         translateZ: 0, // Force HA by animating a 3D property
         translateX: ['0%', '-100%']
       },
@@ -33,7 +33,7 @@ export default function (timings) {
     },
     overlay: {
       duration: timings.timeBase * 2,
-      enter: {
+      enter:    {
         opacity: [1, 0]
       },
       leave: {
@@ -42,7 +42,7 @@ export default function (timings) {
     },
     leftPanel: {
       duration: timings.timeBase,
-      enter: {
+      enter:    {
         translateZ: 0, // Force HA by animating a 3D property
         translateX: ['0%', '-100%']
       },
@@ -51,7 +51,7 @@ export default function (timings) {
         translateX: ['100%', '0%']
       }
     },
-    easeOutFunction: 'cubic-bezier(0.23, 1, 0.32, 1)',
+    easeOutFunction:   'cubic-bezier(0.23, 1, 0.32, 1)',
     easeInOutFunction: 'cubic-bezier(0.445, 0.05, 0.55, 0.95)'
   };
 

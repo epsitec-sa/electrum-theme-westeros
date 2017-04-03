@@ -82,7 +82,7 @@ describe ('resolve', () => {
 
     it ('merges recursively and adds or removes properties as expected', () => {
       const styleA = {
-        x: 10,
+        x:   10,
         foo: {
           y: 20,
           z: {
