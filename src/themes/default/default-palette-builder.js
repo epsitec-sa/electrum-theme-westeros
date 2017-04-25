@@ -84,6 +84,8 @@ export default function (colors) {
     vnavigatorButtonActiveBackground:   lighten (colors.base, 0.5),
 
     text:                        lighten (colors.dark, 0.2),
+    highlightedText:             colors.light,
+    highlightedTextBackground:   colors.base,
     infoBackground:              darken (colors.light, 0.2),
     buttonBackground:            lighten (colors.light, 0.5),
     buttonBorder:                lighten (colors.dark, 0.7),
