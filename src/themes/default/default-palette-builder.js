@@ -199,7 +199,7 @@ export default function (colors) {
     notificationBackgroundRead:    emphasize (colors.dark, 0.1),
 
     splitterBackground:      darken (colors.base, 0.4),
-    splitterBackgroundHover: colors.base,
+    splitterBackgroundHover: lighten (colors.base, 0.3),
 
     dragAndDropHover:              colors.base,
     roadbookBackground:            emphasize (colors.light, 0.05),
