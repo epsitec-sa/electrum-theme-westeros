@@ -166,7 +166,7 @@ function emphasize (color, coefficient = 0.15) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function fade (color, value) {
-  if (!color) {
+  if (!color || !value) {
     return color;
   }
   color = decomposeColor (color);
@@ -188,7 +188,7 @@ function fade (color, value) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function darken (color, coefficient) {
-  if (!color) {
+  if (!color || !coefficient) {
     return color;
   }
   color = decomposeColor (color);
@@ -212,7 +212,7 @@ function darken (color, coefficient) {
  * @returns {string} A CSS color string. Hex input values are returned as rgb
  */
 function lighten (color, coefficient) {
-  if (!color) {
+  if (!color || !coefficient) {
     return color;
   }
   color = decomposeColor (color);
