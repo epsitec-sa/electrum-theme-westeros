@@ -97,10 +97,12 @@ export default function (spacing) {
 
     flyingBalloonTriangleSize: multiply (spacing.lineHeight, 0.3),
     flyingBalloonTextSize:     '80%',
-    flyingBalloonTriangle:     multiply (spacing.lineSpacing, 1.0),
     flyingBalloonPadding:      multiply (spacing.lineSpacing, 0.5),
     flyingBalloonRadius:       multiply (spacing.lineSpacing, 0.3),
     flyingShadow:              '0px 10px 20px rgba(0, 0, 0, 0.30)',
+
+    flyingDialogTriangleSize: multiply (spacing.lineHeight, 1.0),
+    flyingDialogRadius:       multiply (spacing.lineSpacing, 0.3),
 
     ticketVerticalSpacing:        '2px',
     ticketVerticalSpacingFirst:   '1px',
