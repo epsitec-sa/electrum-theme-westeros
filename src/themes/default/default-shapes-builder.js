@@ -164,5 +164,8 @@ export default function (spacing) {
 
     tablePadding:  spacing.lineSpacing,
     tableTextSize: '90%',
+
+    glyphsDialogButtonWidth:  '200px',
+    glyphsDialogButtonMargin: '5px',
   };
 }
