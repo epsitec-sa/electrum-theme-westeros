@@ -121,7 +121,7 @@ export default function (colors) {
     recurrenceHeaderInfoExtendedBackground:  colors.base,
     recurrenceHeaderInfoCompactedText:       colors.dark,
     recurrenceHeaderInfoExtendedText:        colors.light,
-    recurrenceExtendedBoxBackground:         lighten (colors.base, 0.7),
+    recurrenceExtendedBoxBackground:         lighten (colors.base, 0.5),
 
     eventBoxBackground:           darken (colors.light, 0.15),
     eventBackground:              darken (colors.light, 0.05),
