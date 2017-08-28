@@ -4,35 +4,25 @@
   "description": "Electrum Theme provides basic theming support for use with electrum-arc.",
   "main": "lib/index.js",
   "scripts": {
-    "babel": "babel --quiet --out-dir lib src && babel --quiet --out-dir lib.test src.test",
-    "clean": "rimraf ./lib && rimraf ./lib.test",
-    "compile": "npm run clean && require-self && npm run eslint && npm run babel",
-    "eslint": "eslint src src.test",
-    "rebuild": "npm run babel",
+    "eslint": "eslint lib lib.test",
     "mocha": "mocha lib.test/**/*.js",
-    "prepublish": "npm run compile",
-    "test": "npm run compile && npm run mocha",
-    "watch": "chokidar \"src/**/*.js\" -c \"npm run rebuild\"",
-    "startcraft": "npm run clean && npm run babel"
+    "test": "npm run mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/epsitec-sa/electrum-theme.git"
+    "url": "git+https://github.com/epsitec-sa/electrum-theme-westeros.git"
   },
   "author": "Epsitec SA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/epsitec-sa/electrum-theme/issues"
+    "url": "https://github.com/epsitec-sa/electrum-theme-westeros/issues"
   },
-  "homepage": "https://github.com/epsitec-sa/electrum-theme#readme",
+  "homepage": "https://github.com/epsitec-sa/electrum-theme-westeros#readme",
   "devDependencies": {
     "babel-env": "^2.4.0",
-    "chokidar-cli": "^1.2.0",
     "generic-js-env": "^2.2.4",
     "mai-chai": "^3.3.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "require-self": "^0.1.0",
-    "rimraf": "^2.6.1"
+    "react-dom": "^15.4.2"
   }
 }
