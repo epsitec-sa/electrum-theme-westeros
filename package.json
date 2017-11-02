@@ -22,7 +22,7 @@
     "babel-env": "^2.4.0",
     "generic-js-env": "^2.2.4",
     "mai-chai": "^3.3.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }
