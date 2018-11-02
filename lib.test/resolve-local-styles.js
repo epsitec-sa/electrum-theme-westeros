@@ -63,7 +63,11 @@ describe('resolve', () => {
     it('merges simple objects', () => {
       const styleA = {x: 10, y: 20};
       const styleB = {y: 30, z: 40};
-      expect(mergeStyleProperties(styleA, styleB)).to.deep.equal({x: 10, y: 30, z: 40});
+      expect(mergeStyleProperties(styleA, styleB)).to.deep.equal({
+        x: 10,
+        y: 30,
+        z: 40,
+      });
     });
 
     it('does modify left-hand side', () => {
@@ -97,9 +101,15 @@ describe('resolve', () => {
       mergeStyleProperties(styleA, {foo: {z: {}}});
       expect(styleA).to.deep.equal({x: 10, foo: {y: 20, z: {src: 'A'}}});
       mergeStyleProperties(styleA, {foo: {z: {dst: 'B'}}});
-      expect(styleA).to.deep.equal({x: 10, foo: {y: 20, z: {src: 'A', dst: 'B'}}});
+      expect(styleA).to.deep.equal({
+        x: 10,
+        foo: {y: 20, z: {src: 'A', dst: 'B'}},
+      });
       mergeStyleProperties(styleA, {foo: {z: {dst: 'C'}, w: 0}});
-      expect(styleA).to.deep.equal({x: 10, foo: {y: 20, z: {src: 'A', dst: 'C'}, w: 0}});
+      expect(styleA).to.deep.equal({
+        x: 10,
+        foo: {y: 20, z: {src: 'A', dst: 'C'}, w: 0},
+      });
       mergeStyleProperties(styleA, {foo: {z: {src: null}, w: undefined}});
       expect(styleA).to.deep.equal({x: 10, foo: {y: 20, z: {dst: 'C'}}});
     });

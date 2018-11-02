@@ -7,7 +7,11 @@ const theme = Theme.create('default');
 
 const def1 = _ => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
 const def2 = (_, props) => ({base: {size: props.size || 10}, small: {size: 5}});
-const def3 = () => ({a: {x: 10, n: 'a'}, b: {y: 20, n: 'b'}, c: {x: 11, y: 22}});
+const def3 = () => ({
+  a: {x: 10, n: 'a'},
+  b: {y: 20, n: 'b'},
+  c: {x: 11, y: 22},
+});
 
 /******************************************************************************/
 
@@ -61,7 +65,10 @@ describe('Style', () => {
   describe('resolve()', () => {
     it('resolves requested style', () => {
       const styles = Styles.create(def1)(theme);
-      expect(styles.resolve('base')).to.deep.equal({size: 10, face: 'Lato, sans-serif'});
+      expect(styles.resolve('base')).to.deep.equal({
+        size: 10,
+        face: 'Lato, sans-serif',
+      });
       expect(styles.resolve('small')).to.deep.equal({size: 5});
     });
 
@@ -74,8 +81,16 @@ describe('Style', () => {
       const styles = Styles.create(def3)(theme);
       expect(styles.resolve('a', 'b')).to.deep.equal({x: 10, n: 'b', y: 20});
       expect(styles.resolve('b', 'a')).to.deep.equal({y: 20, n: 'a', x: 10});
-      expect(styles.resolve('b', 'a', 'c')).to.deep.equal({y: 22, n: 'a', x: 11});
-      expect(styles.resolve('a', 'b', 'c')).to.deep.equal({y: 22, n: 'b', x: 11});
+      expect(styles.resolve('b', 'a', 'c')).to.deep.equal({
+        y: 22,
+        n: 'a',
+        x: 11,
+      });
+      expect(styles.resolve('a', 'b', 'c')).to.deep.equal({
+        y: 22,
+        n: 'b',
+        x: 11,
+      });
     });
 
     it('skips unknown styles', () => {
@@ -100,7 +115,10 @@ describe('Style', () => {
         b: {y: s => ({g: 'B', h: 'h', xx: s.x / 2})},
       });
       const styles = Styles.create(def)(theme);
-      expect(styles.resolve('a', 'b')).to.deep.equal({x: 10, y: {f: 'f', g: 'B', h: 'h', xx: 5}});
+      expect(styles.resolve('a', 'b')).to.deep.equal({
+        x: 10,
+        y: {f: 'f', g: 'B', h: 'h', xx: 5},
+      });
     });
 
     it('undefines null properties', () => {
@@ -121,32 +139,52 @@ describe('Style', () => {
     const styles = Styles.create(def1)(theme);
     it('returns basic style', () => {
       const props = {};
-      expect(customResolve(styles, props)).to.deep.equal({size: 10, face: 'Lato, sans-serif'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 10,
+        face: 'Lato, sans-serif',
+      });
     });
 
     it('appends props.kind sub-style to style', () => {
       const props = {kind: 'small'};
-      expect(customResolve(styles, props)).to.deep.equal({size: 5, face: 'Lato, sans-serif'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 5,
+        face: 'Lato, sans-serif',
+      });
     });
 
     it('no-op if props.kind does not map to a sub-style', () => {
       const props = {kind: 'large'};
-      expect(customResolve(styles, props)).to.deep.equal({size: 10, face: 'Lato, sans-serif'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 10,
+        face: 'Lato, sans-serif',
+      });
     });
 
     it('appends props.styles to style', () => {
       const props = {styles: {foo: 'bar'}};
-      expect(customResolve(styles, props)).to.deep.equal({size: 10, face: 'Lato, sans-serif', foo: 'bar'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 10,
+        face: 'Lato, sans-serif',
+        foo: 'bar',
+      });
     });
 
     it('executes functions in props.styles', () => {
       const props = {styles: {size: s => s.size + 2}};
-      expect(customResolve(styles, props)).to.deep.equal({size: 12, face: 'Lato, sans-serif'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 12,
+        face: 'Lato, sans-serif',
+      });
     });
 
     it('appends props.styles (array) to style', () => {
       const props = {styles: [{foo: 'bar'}, {foo: s => s.foo + '/foo'}]};
-      expect(customResolve(styles, props)).to.deep.equal({size: 10, face: 'Lato, sans-serif', foo: 'bar/foo'});
+      expect(customResolve(styles, props)).to.deep.equal({
+        size: 10,
+        face: 'Lato, sans-serif',
+        foo: 'bar/foo',
+      });
     });
 
     it('resolves includes', () => {
