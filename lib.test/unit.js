@@ -1,7 +1,7 @@
 /* global describe it */
 
-import {expect} from 'mai-chai';
-import {Unit} from 'electrum-theme';
+import {expect} from 'chai';
+import {Unit} from '..';
 
 describe('Unit', () => {
   describe('multiply()', () => {

@@ -1,7 +1,7 @@
 /* global describe it */
 
-import {expect} from 'mai-chai';
-import {Theme} from 'electrum-theme';
+import {expect} from 'chai';
+import {Theme} from '..';
 
 describe('Theme', () => {
   describe('constructor()', () => {

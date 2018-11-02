@@ -1,7 +1,7 @@
 /* global describe it */
 
-import {expect} from 'mai-chai';
-import {Styles, Theme} from 'electrum-theme';
+import {expect} from 'chai';
+import {Styles, Theme} from '..';
 
 const theme = Theme.create('default');
 

@@ -1,7 +1,7 @@
 /* global describe it */
 
-import {expect} from 'mai-chai';
-import {ColorManipulator} from 'electrum-theme';
+import {expect} from 'chai';
+import {ColorManipulator} from '..';
 
 const {fade, darken, lighten, emphasize, getLuminance} = ColorManipulator;
 

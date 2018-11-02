@@ -1,11 +1,10 @@
 {
   "name": "electrum-theme",
   "version": "4.6.2",
-  "description": "Electrum Theme provides basic theming support for use with electrum-arc.",
+  "description": "Electrum Theme provides basic theming support",
   "main": "lib/index.js",
   "scripts": {
-    "eslint": "eslint lib lib.test",
-    "mocha": "mocha lib.test/**/*.js",
+    "mocha": "mocha --compilers js:babel-core/register lib.test/**/*.js",
     "test": "npm run mocha"
   },
   "repository": {
@@ -18,11 +17,14 @@
     "url": "https://github.com/epsitec-sa/electrum-theme-westeros/issues"
   },
   "homepage": "https://github.com/epsitec-sa/electrum-theme-westeros#readme",
+  "dependencies": {},
   "devDependencies": {
-    "babel-env": "^2.4.0",
-    "generic-js-env": "^2.2.4",
-    "mai-chai": "^3.3.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "prettier": "1.12.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "xcraft-dev-rules": "^0.2.3"
   }
 }

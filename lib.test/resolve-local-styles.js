@@ -1,9 +1,9 @@
 /* global describe it */
 
-import {expect} from 'mai-chai';
+import {expect} from 'chai';
 
-import {resolveIncludes} from '../src/resolve-local-style.js';
-import {mergeStyleProperties} from '../src/resolve-local-style.js';
+import {resolveIncludes} from '../lib/resolve-local-style.js';
+import {mergeStyleProperties} from '../lib/resolve-local-style.js';
 
 /******************************************************************************/
 
