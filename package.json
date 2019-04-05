@@ -1,6 +1,6 @@
 {
   "name": "electrum-theme",
-  "version": "4.6.2",
+  "version": "5.0.0",
   "description": "Electrum Theme provides basic theming support",
   "main": "lib/index.js",
   "scripts": {
