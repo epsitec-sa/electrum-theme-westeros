@@ -1,9 +1,11 @@
+'use strict';
+
 /* global describe it */
 
-import {expect} from 'chai';
+const {expect} = require('chai');
 
-import {resolveIncludes} from '../lib/resolve-local-style.js';
-import {mergeStyleProperties} from '../lib/resolve-local-style.js';
+const {resolveIncludes} = require('../lib/resolve-local-style.js');
+const {mergeStyleProperties} = require('../lib/resolve-local-style.js');
 
 /******************************************************************************/
 

@@ -1,7 +1,9 @@
+'use strict';
+
 /* global describe it */
 
-import {expect} from 'chai';
-import {Unit} from '..';
+const {expect} = require('chai');
+const {Unit} = require('..');
 
 describe('Unit', () => {
   describe('multiply()', () => {

@@ -1,7 +1,9 @@
+'use strict';
+
 /* global describe it */
 
-import {expect} from 'chai';
-import {Styles, Theme} from '..';
+const {expect} = require('chai');
+const {Styles, Theme} = require('..');
 
 const theme = Theme.create('default');
 

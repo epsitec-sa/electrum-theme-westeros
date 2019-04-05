@@ -1,7 +1,9 @@
+'use strict';
+
 /* global describe it */
 
-import {expect} from 'chai';
-import {Theme} from '..';
+const {expect} = require('chai');
+const {Theme} = require('..');
 
 describe('Theme', () => {
   describe('constructor()', () => {

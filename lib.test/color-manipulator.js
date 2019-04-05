@@ -1,7 +1,9 @@
+'use strict';
+
 /* global describe it */
 
-import {expect} from 'chai';
-import {ColorManipulator} from '..';
+const {expect} = require('chai');
+const {ColorManipulator} = require('..');
 
 const {fade, darken, lighten, emphasize, getLuminance} = ColorManipulator;
 
