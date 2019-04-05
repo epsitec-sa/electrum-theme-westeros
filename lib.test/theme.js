@@ -23,7 +23,7 @@ describe('Theme', () => {
       const theme = Theme.create('Default');
       expect(theme).to.have.property('name', 'Default');
       expect(theme.colors).to.have.property('base');
-      expect(theme.palette).to.have.property('taskBackground', '#336799');
+      expect(theme.palette).to.have.property('taskBackground');
       expect(theme.shapes).to.have.property('defaultBorderRadius');
       expect(theme.spacing).to.have.property('iconSize');
       expect(theme.styles).to.have.property('reset');
@@ -36,7 +36,7 @@ describe('Theme', () => {
       const theme = Theme.create('DefaultGreen');
       expect(theme).to.have.property('name', 'DefaultGreen');
       expect(theme.colors).to.have.property('base');
-      expect(theme.palette).to.have.property('taskBackground', '#33997e');
+      expect(theme.palette).to.have.property('taskBackground');
       expect(theme.shapes).to.have.property('defaultBorderRadius');
       expect(theme.spacing).to.have.property('iconSize');
       expect(theme.styles).to.have.property('reset');
