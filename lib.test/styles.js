@@ -72,7 +72,13 @@ describe('Style', () => {
       const styles = Styles.create(def1)(theme);
       expect(styles.resolve('base')).to.deep.equal({
         size: 10,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
       });
       expect(styles.resolve('small')).to.deep.equal({size: 5});
     });
@@ -146,7 +152,13 @@ describe('Style', () => {
       const props = {};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 10,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
       });
     });
 
@@ -154,7 +166,13 @@ describe('Style', () => {
       const props = {kind: 'small'};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 5,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
       });
     });
 
@@ -162,7 +180,13 @@ describe('Style', () => {
       const props = {kind: 'large'};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 10,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
       });
     });
 
@@ -170,7 +194,13 @@ describe('Style', () => {
       const props = {styles: {foo: 'bar'}};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 10,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
         foo: 'bar',
       });
     });
@@ -179,7 +209,13 @@ describe('Style', () => {
       const props = {styles: {size: s => s.size + 2}};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 12,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
       });
     });
 
@@ -187,7 +223,13 @@ describe('Style', () => {
       const props = {styles: [{foo: 'bar'}, {foo: s => s.foo + '/foo'}]};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 10,
-        face: 'Lato, sans-serif',
+        face: {
+          0: 'Lato',
+          1: 'Open Sans',
+          2: 'Helvetica',
+          3: 'Arial',
+          4: 'sans-serif',
+        },
         foo: 'bar/foo',
       });
     });
@@ -195,14 +237,14 @@ describe('Style', () => {
     it('resolves includes', () => {
       const props = {styles: {foo: 'bar', includes: ['resetAlign']}};
       expect(JSON.stringify(customResolve(styles, props))).to.equal(
-        '{"size":10,"face":"Lato, sans-serif","foo":"bar","verticalAlign":"baseline"}'
+        '{"size":10,"face":{"0":"Lato","1":"Open Sans","2":"Helvetica","3":"Arial","4":"sans-serif"},"foo":"bar","verticalAlign":"baseline"}'
       );
     });
 
     it('resolves includes, preserves ordering', () => {
       const props = {styles: {includes: ['resetAlign'], foo: 'bar'}};
       expect(JSON.stringify(customResolve(styles, props))).to.equal(
-        '{"size":10,"face":"Lato, sans-serif","verticalAlign":"baseline","foo":"bar"}'
+        '{"size":10,"face":{"0":"Lato","1":"Open Sans","2":"Helvetica","3":"Arial","4":"sans-serif"},"verticalAlign":"baseline","foo":"bar"}'
       );
     });
   });
