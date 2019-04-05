@@ -7,7 +7,10 @@ const {Styles, Theme} = require('..');
 
 const theme = Theme.create('default');
 
-const def1 = _ => ({base: {size: 10, face: theme.typo.font}, small: {size: 5}});
+const def1 = () => ({
+  base: {size: 10, face: theme.typo.font},
+  small: {size: 5},
+});
 const def2 = (_, props) => ({base: {size: props.size || 10}, small: {size: 5}});
 const def3 = () => ({
   a: {x: 10, n: 'a'},
@@ -124,7 +127,7 @@ describe('Style', () => {
     });
 
     it('undefines null properties', () => {
-      const def = _ => ({
+      const def = () => ({
         a: {x: 10, y: 10},
         b: {z: 20, x: null},
       });
