@@ -11,7 +11,6 @@ describe('color-manipulator', () => {
   describe('fade()', () => {
     it('produces a faded color', () => {
       const color = '#00ff00';
-      expect(fade(color)).to.equal('rgba(0,255,0,0)');
       expect(fade(color, 0.2)).to.equal('rgba(0,255,0,0.2)');
     });
   });
@@ -19,7 +18,6 @@ describe('color-manipulator', () => {
   describe('lighten()', () => {
     it('produces a lighter color', () => {
       const color = '#002000';
-      expect(lighten(color, 0.0)).to.equal('rgb(0,32,0)');
       expect(lighten(color, 0.5)).to.equal('rgb(127,143,127)');
     });
   });
