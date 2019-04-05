@@ -4,7 +4,7 @@
   "description": "Electrum Theme provides basic theming support",
   "main": "lib/index.js",
   "scripts": {
-    "mocha": "mocha --compilers js:babel-core/register lib.test/**/*.js",
+    "mocha": "mocha lib.test/**/*.js",
     "test": "npm run mocha"
   },
   "repository": {
@@ -19,9 +19,8 @@
   "homepage": "https://github.com/epsitec-sa/electrum-theme-westeros#readme",
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "chai": "^3.5.0",
+    "mocha": "^5.2.0",
     "prettier": "1.16.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
