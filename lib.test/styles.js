@@ -112,18 +112,18 @@ describe('Style', () => {
     });
 
     it('applies functions', () => {
-      const def = _ => ({
+      const def = (_) => ({
         a: {x: 10, n: 'a'},
-        b: {y: s => s.x * 2, n: 'b'},
+        b: {y: (s) => s.x * 2, n: 'b'},
       });
       const styles = Styles.create(def)(theme);
       expect(styles.resolve('a', 'b')).to.deep.equal({x: 10, n: 'b', y: 20});
     });
 
     it('merges nested properties', () => {
-      const def = _ => ({
+      const def = (_) => ({
         a: {x: 10, y: {f: 'f', g: 'A'}},
-        b: {y: s => ({g: 'B', h: 'h', xx: s.x / 2})},
+        b: {y: (s) => ({g: 'B', h: 'h', xx: s.x / 2})},
       });
       const styles = Styles.create(def)(theme);
       expect(styles.resolve('a', 'b')).to.deep.equal({
@@ -206,7 +206,7 @@ describe('Style', () => {
     });
 
     it('executes functions in props.styles', () => {
-      const props = {styles: {size: s => s.size + 2}};
+      const props = {styles: {size: (s) => s.size + 2}};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 12,
         face: {
@@ -220,7 +220,7 @@ describe('Style', () => {
     });
 
     it('appends props.styles (array) to style', () => {
-      const props = {styles: [{foo: 'bar'}, {foo: s => s.foo + '/foo'}]};
+      const props = {styles: [{foo: 'bar'}, {foo: (s) => s.foo + '/foo'}]};
       expect(customResolve(styles, props)).to.deep.equal({
         size: 10,
         face: {

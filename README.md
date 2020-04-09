@@ -1,4 +1,5 @@
 # electrum-theme
+
 Electrum Theme (`electrum-theme`) provides basic theming support for use
 with `electrum-arc`, the Electrum Agnostic Reactive Components.
 
@@ -6,17 +7,17 @@ with `electrum-arc`, the Electrum Agnostic Reactive Components.
 
 The theme provides various objects:
 
-* `colors` &rarr; raw (base) colors, used to build a palette.
-* `spacing` &rarr; raw (base) dimensions, used to build shapes and typo.
-* `timing` &rarr; raw (base) timing parameters, used to build transitions.
+- `colors` &rarr; raw (base) colors, used to build a palette.
+- `spacing` &rarr; raw (base) dimensions, used to build shapes and typo.
+- `timing` &rarr; raw (base) timing parameters, used to build transitions.
 
 which are then used to build following higher level constructs:
 
-* `palette` &rarr; semantic colors.
-* `shapes` &rarr; dimensions used to produce shapes and geometry.
-* `styles` &rarr; predefined styles (as sets of CSS properties).
-* `transitions` &rarr; animations and transitions.
-* `typo` &rarr; font-related settings.
+- `palette` &rarr; semantic colors.
+- `shapes` &rarr; dimensions used to produce shapes and geometry.
+- `styles` &rarr; predefined styles (as sets of CSS properties).
+- `transitions` &rarr; animations and transitions.
+- `typo` &rarr; font-related settings.
 
 The theme is provided to all _linked_ electrum components through the
 `theme` property.
@@ -30,13 +31,13 @@ predefined theme configuration names (by default the theme named
 camelCase or kebab-case.
 
 ```javascript
-const theme = Theme.create ('dark');
+const theme = Theme.create('dark');
 ```
 
 # Styles class
 
-* `styles` &rarr; cached style object.
-* `usesProps` &rarr; `true` if the style function expects properties.  
+- `styles` &rarr; cached style object.
+- `usesProps` &rarr; `true` if the style function expects properties.
 
 ## API surfaced in electrum components
 
@@ -44,8 +45,8 @@ Usually, you won't want to interact with the `Styles` class directly, but
 rather rely on following `Electrum` injected functions on the component
 instance:
 
-* On a component, `this.resolveStyle()` forwards to `styles.resolve()`
-* On a component, `this.styles` returns a contextual array of style
+- On a component, `this.resolveStyle()` forwards to `styles.resolve()`
+- On a component, `this.styles` returns a contextual array of style
   objects, depending on the `props` found on the component instance.
 
 ## Resolving a specific style
@@ -53,9 +54,9 @@ instance:
 Based on `styles` definition object, you can query a specific style by
 using `styles.resolve()`:
 
-* `styles.resolve(name)` &rarr; returns a style object or `{}` if it is
+- `styles.resolve(name)` &rarr; returns a style object or `{}` if it is
   not known.
-* `styles.resolve(name1, name2, ...)` &rarr; returns a style object resulting
+- `styles.resolve(name1, name2, ...)` &rarr; returns a style object resulting
   in a merge of all resolved style objects, applying properties from left to
   right.
 
@@ -64,19 +65,19 @@ using `styles.resolve()`:
 Electrum Theme also exposes a `ColorManipulator` which contains following
 functions:
 
-* `fade(color, amount)` &rarr; faded color done by altering the alpha channel.
-* `lighten(color, amount)` &rarr; lighter color.
-* `darken(color, amount)` &rarr; darker color.
-* `emphasize(color, amount)` &rarr; darker color/lighter color (depending
+- `fade(color, amount)` &rarr; faded color done by altering the alpha channel.
+- `lighten(color, amount)` &rarr; lighter color.
+- `darken(color, amount)` &rarr; darker color.
+- `emphasize(color, amount)` &rarr; darker color/lighter color (depending
   on the initial luminance). A dark color will become lighter. A light
   color will become darker.
-* `getLuminance(color)` &rarr; the computed luminance (0...1).
+- `getLuminance(color)` &rarr; the computed luminance (0...1).
 
 ```javascript
 import {ColorManipulator} from 'electrum-theme';
 
 const color1 = '#00ff00';
-const color2 = ColorManipulator.darken (color1, 0.2);
+const color2 = ColorManipulator.darken(color1, 0.2);
 ```
 
 ## Unit manipulation
@@ -85,9 +86,9 @@ const color2 = ColorManipulator.darken (color1, 0.2);
 or standard CSS dimension specification) by a factor. Following dimensions
 are supported:
 
-* `px`
-* `em` and `rem`
-* `%`
+- `px`
+- `em` and `rem`
+- `%`
 
 # Styling with a theme in electrum components
 
@@ -100,7 +101,7 @@ element using the `this.styles` getter:
 ```javascript
 // hello.component.js
 export default class Hello extends React.Component {
-  render () {
+  render() {
     return <span style={this.styles}>Hello</span>;
   }
 }
@@ -109,11 +110,11 @@ export default function (theme) {
   return {
     base: {
       color: theme.colors.black,
-      fontFamily: theme.typo.font
+      fontFamily: theme.typo.font,
     },
     cool: {
-      color: theme.colors.blue100
-    }
+      color: theme.colors.blue100,
+    },
   };
 }
 ```
@@ -132,13 +133,13 @@ as style objects) by applying them using function `with()`:
 ```javascript
 let styles = this.styles;
 if (disabled) {
-  styles = styles.with ('disabled');
+  styles = styles.with('disabled');
 }
 if (whatever) {
-  styles = styles.with ('other');
+  styles = styles.with('other');
 }
 if (x > 100) {
-  styles = styles.with ({width: x*2 - 100});
+  styles = styles.with({width: x * 2 - 100});
 }
 ```
 
@@ -156,9 +157,9 @@ export default function (theme) {
   return {
     base: {
       position: 'fixed',
-      includes: ['fullSize'],  // <-- include style fullSize here
-      backgroundColor: theme.palette.canvasColor
-    }
+      includes: ['fullSize'], // <-- include style fullSize here
+      backgroundColor: theme.palette.canvasColor,
+    },
   };
 }
 ```
@@ -176,8 +177,8 @@ export default function (theme) {
       // ...
     },
     small: {
-      height: style => style.height * 0.8 // property defined as a function
-    }
+      height: (style) => style.height * 0.8, // property defined as a function
+    },
   };
 }
 ```
