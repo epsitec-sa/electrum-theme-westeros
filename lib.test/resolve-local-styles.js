@@ -53,7 +53,7 @@ describe('resolve', () => {
       const style = {x: 10, includes: ['a'], y: 20};
       const theme = {
         styles: {
-          a: {x: s => s.x + 1},
+          a: {x: (s) => s.x + 1},
         },
       };
       const result = resolveIncludes(style, theme);
